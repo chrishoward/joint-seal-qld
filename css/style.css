@@ -1,0 +1,14 @@
+/* Stylesheet */
+
+/* Webfont format, use lower case letters in url to avoid unexpected results in IE */
+@font-face {
+    font-family: 'clobber-grotesk-medium';
+    src: url('fonts/clobber-grotesk-medium.woff2') format('woff2'),
+         url('fonts/clobber-grotesk-medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'clobber-grotesk-medium', 'Trebuchet MS', sans-serif;
+}
