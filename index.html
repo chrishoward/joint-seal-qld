@@ -72,7 +72,11 @@
             <h1>Send us an email via our website.</h1>
             <p>Please provide your preferred contact details (email address or phone number or both).</p>
             <form action="/contact.php" method="POST">
-                <input type="text" 
+                <input type="text" name="name" aria-label="Enter name" placeholder="Name" required>
+                <!-- Needs to be configured to have email OR phone number required -->
+                <input type="email" name="email" aria-label="Enter email" placeholder="Email">
+                <input type="text" name="tel" aria-label="Enter telephone number" placeholder="Phone Number">
+                <textarea name="message" placeholder="Message" required></textarea>
             </form>
         </section>
 
