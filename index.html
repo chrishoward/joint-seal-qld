@@ -2,7 +2,7 @@
 <!doctype html>
 
 <!-- Html -->
-<html lang="en" dir="rtl">
+<html lang="en" dir="ltr">
     
     <!-- Head -->
     <head>
@@ -42,12 +42,20 @@
     <body>
         <!-- NTS Use unique IDs for each page -->
         <header role="banner">
-
+            <img src="" alt="" width="" height="">
+            <p>0422 508 313</p>
+            <p>info@jointsealqld.com.au</p>
+            <nav role="navigation">
+                <ul>
+                    <li>HOME</li>
+                    <li>SERVICES</li>
+                    <li>PHOTOS</li>
+                    <li>CONTACT</li>
+                </ul>
+            </nav>
         </header>
 
-        <nav role="navigation">
 
-        </nav>
 
         <main role="main">
             <article>
@@ -76,7 +84,8 @@
                 <!-- Needs to be configured to have email OR phone number required -->
                 <input type="email" name="email" aria-label="Enter email" placeholder="Email">
                 <input type="text" name="tel" aria-label="Enter telephone number" placeholder="Phone Number">
-                <textarea name="message" placeholder="Message" required></textarea>
+                <textarea name="message" aria-label="Enter message" placeholder="Message" required></textarea>
+                <input type="submit" name="Send">
             </form>
         </section>
 
