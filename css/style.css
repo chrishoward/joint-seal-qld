@@ -3,19 +3,19 @@
 /* Webfont format, use lower case letters in url to avoid unexpected results in IE */
 @font-face {
     font-family: 'clobber-grotesk-medium';
-    src: url('fonts/clobber-grotesk-medium.woff2') format('woff2'),
-         url('fonts/clobber-grotesk-medium.woff') format('woff');
+    src: url('../fonts/clobber-grotesk-medium.woff2') format('woff2'),
+    url('../fonts/clobber-grotesk-medium.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 /* Show outline around all elements for clarity purposes when previewing */
-* {
+/* * {
     outline: 1px solid rgb(255, 0, 234);
-}
+} */
 
 /* Show div id/class names for clarity purposes when previewing */
-*:before {
+/* *:before {
     content: attr(class);
     position: absolute;
     color: green;
@@ -25,7 +25,7 @@
     content: attr(class);
     position: absolute;
     color: green;
-}
+} */
 
 body {
     font-family: 'clobber-grotesk-medium', 'Trebuchet MS', sans-serif;
@@ -36,7 +36,7 @@ body {
     width: 939px;
     /* padding-top: 100px; */
     /* height: 500px; */
-    /* max-width: 100%; */
+    max-width: 100%;
     /* position: relative; */
 }
 
@@ -47,7 +47,9 @@ header {
     /* max-width: 100%; */
     /* margin: 0 auto; */
     /* padding-top: 100px; */
-    /* background: url("../images/header-bg.png") no-repeat top center; */
+    /* max-width: 100%; */
+    text-align: center;
+    background: url("../images/header-bg.png") no-repeat top center;
     /* display: inline-; */
     /* width: 939px; */
     /* background: url("../images/header-bg.png"); */
@@ -56,6 +58,20 @@ header {
     /* height: 235px; */
     /* background-color: #fff; */
     /* position: relative; */
+}
+
+.header-content-wrapper {
+    display: inline-block;
+    /* width: 657px; */
+    /* height: 227px; */
+    /* margin: 0 auto; */
+    /* background: #fff; */
+    /* max-width: 100%; */
+    /* position: absolute; */
+    /* left: 50%; */
+    /* right: 50%; */
+    /* margin-left: -250px; */
+    /* margin-top: -250px; */
 }
 
 .header-cartoon {
@@ -67,16 +83,19 @@ header {
     /* position: absolute; */
 }
 
-.header-info {
-    /* width: 494px; */
+.header-info-wrapper {
+    width: 494px;
     /* height: 100px; */
     /* float: left; */
     display: inline-block;
+    vertical-align: top;
+    /* padding-bottom: 20px; */
+    /* padding-top: 20px; */
     /* margin-left: 32%; */
-    /* margin-top: 9%; */
+    margin-top: 15px;
     /* padding-top: 9%; */
     /* margin-top: 1%; */
-    position: relative;
+    /* position: relative; */
     /* top: 0; */
     /* left: 0; */
     /* bottom: 0; */
@@ -85,10 +104,12 @@ header {
     /* float: left; */
 }
 
-.header-info img {
+.header-info-wrapper img {
+    width: 457px;
+    height: 108px;
     /* border: 1px solid grey; */
     /* padding-top: 4%; */
-    /* width: 93%; */
+    /* width: 20%; */
     /* position: absolute; */
     /* top: 0; */
     /* left: 0; */
@@ -101,6 +122,9 @@ header {
 }
 
 .header-contact-info {
+    display: inline-block;
+    width: 457px;
+    margin-top: 3px;
     /* position: absolute; */
     /* top: 0; */
     /* left: 0; */
@@ -110,20 +134,54 @@ header {
 
 .header-mobile {
     display: inline;
+    float: left;
+    font-size: 22px;
+    /* font-weight: bold; */
+    color: #323232;
 }
 
 .header-email {
     display: inline;
     float: right;
+    font-size: 22px;
+    /* font-weight: bold; */
+    color: #323232;
+}
+
+.header-email span {
+    font-weight: bold;
+}
+
+.header-nav-ul {
+    /* vertical-align: middle; */
+    /* margin-top: auto; */
+    padding-top: 11px;
+    margin-right: 17px;
+}
+
+.header-nav {
+    height: 37px;
+    width: 100%;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    border: 1px solid #A69B9B;
+    box-shadow: 0px 3px 4px rgba(0,0,0,0.25);
+    margin-top: 11px;
 }
 
 .nav-list-item {
     display: inline-block;
     width: 23.6%;
     text-align: center;
+    /* vertical-align: middle; */
     /* margin: 0 1em; */
 }
 
-.header-nav {
-    width: 100%;
+.nav-list-item a,a:link {
+    text-decoration: none;
+    color: #323232;
+}
+
+.nav-list-item a:hover {
+    color: #077EBE;
 }
