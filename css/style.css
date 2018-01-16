@@ -10,9 +10,9 @@
 }
 
 /* Show outline around all elements for clarity purposes when previewing */
-/* * {
+* {
     outline: 1px solid rgb(255, 0, 234);
-} */
+}
 
 /* Show div id/class names for clarity purposes when previewing */
 /* *:before {
@@ -184,4 +184,12 @@ header {
 
 .nav-list-item a:hover {
     color: #077EBE;
+}
+
+.contact {
+    text-align; 
+}
+
+h1 {
+    font-size: 26px;
 }
