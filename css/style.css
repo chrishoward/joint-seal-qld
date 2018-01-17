@@ -29,6 +29,7 @@
 
 body {
     font-family: 'clobber-grotesk-medium', 'Trebuchet MS', sans-serif;
+    color: #323232;
 }
 
 .wrapper {
@@ -187,9 +188,55 @@ header {
 }
 
 .contact {
-    text-align; 
+    /* text-align:  */
+    /* float: center; */
+    /* align: center; */
 }
 
-h1 {
+.contact h1 {
     font-size: 26px;
+    text-align: center;
+    /* margin: 0 auto; */
+}
+
+.call-button {
+    width: 289px;
+    height: 79px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.call-button-bg {
+    width: 285px;
+    height: 56px;
+    background: linear-gradient(rgba(98, 174, 215, 1), rgba(7, 126, 190, 1));
+    border: 2px solid rgba(6, 118, 179, 1);
+    border-radius: 25px;
+    /* padding-top: auto; */
+    margin: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* overflow: auto; */
+    /* vertical-align: middle; */
+    /* display: inline-block; */
+}
+
+.call-button-bg p {
+    width: 206px;
+    height: 30px;
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    text-shadow: -2px -2px 4px rgba(0, 0, 0, 0.25); 
+    margin: auto;
+    padding-left: 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* vertical-align: middle; */
 }
