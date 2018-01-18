@@ -110,32 +110,33 @@
 
             <section class="contact">
                 <h1>We can help, let's talk about your project</h1>
-                <h1>Give us a call.</h1>
+                <h1 class="contact-heading-2">Give us a call.</h1>
                 <div class="call-button">
                     <img src="images/phone.png" alt="phone-icon">
                     <div class="call-button-bg">
                         <p>0422 508 313</p>
                     </div>
                 </div>
-                <h1>Send us an email.</h1>
+                <h1 class="contact-heading-3">Send us an email.</h1>
                 <div class="email-button">
                     <img src="images/email.png" alt="email-icon">
                     <!-- <div class="email-button-bg"> -->
                     <p>info@jointsealqld.com.au</p>
                     <!-- </div> -->
                 </div>
-                <h1>Send us an email via our website.</h1>
-                <p>Please provide your preferred contact details (email address or phone number or both).</p>
+                <h1 class="contact-heading-4">Send us an email via our website.</h1>
+                <p class="contact-instruction">Please provide your preferred contact details (email address or phone number or both).</p>
                 <form action="/contact.php" method="POST">
-                    <input class="contact-details contact-name" type="text" name="name" aria-label="Enter name" placeholder="Name" required>
+                    <input class="contact-details" type="text" name="name" aria-label="Enter name" placeholder="Name" required>
                     <!-- Needs to be configured to have email OR phone number required -->
-                    <input class="contact-details contact-email" type="email" name="email" aria-label="Enter email" placeholder="Email">
-                    <input class="contact-details contact-tel" type="number" name="tel" aria-label="Enter telephone number" placeholder="Phone">
-                    <textarea class="contact-message" name="message" aria-label="Enter message" placeholder="Message" required></textarea>
-                    <input class="submit-button" type="submit" name="Send Message">
+                    <input class="contact-details" type="email" name="email" aria-label="Enter email" placeholder="Email">
+                    <input class="contact-details" type="number" name="tel" aria-label="Enter telephone number" placeholder="Phone">
+                    <div class="message-and-submit">
+                        <textarea name="message" aria-label="Enter message" placeholder="Message" required></textarea>
+                        <input type="submit" value="Send Message">
+                    </div>
                 </form>
             </section>
-<!-- 
             <footer>
                 <section>
                     <img src="" alt="QBCC logo" width="" height="">
@@ -157,7 +158,6 @@
                     <p>Website developed by Chris Howard</p>
                 </section>
             </footer> 
--->
         </div>
     </body>
 </html>
