@@ -10,9 +10,9 @@
 }
 
 /* Show outline around all elements for clarity purposes when previewing */
-/* * {
+* {
     outline: 1px solid rgb(255, 0, 234);
-} */
+}
 
 /* Show div id/class names for clarity purposes when previewing */
 /* *:before {http://amaysi.ms/r/qQkJP8dJz
@@ -190,6 +190,7 @@ header {
 .contact {
     width: 939px;
     height: 808px;
+    box-sizing: border-box;
     padding-top: 40px;
     box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.25); 
     /* text-align:  */
@@ -319,16 +320,32 @@ header {
     box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.2);
     display: inline-block;
     box-sizing: border-box;
+    /* padding-top: 5px; */
     /* opacity: 0.6; */
 }
 
 .contact-details::placeholder {
+    /* height: 80px; */
     font-family: clobber-grotesk-medium;
     font-size: 20px;
     color: rgba(0,0,0,0.26);
     padding-left: 8px;
+    /* position: absolute; */
+    /* text-transform: uppercase; */
+    /* line-height: 60px; */
+    /* display: inline-block; */
+    /* vertical-align: middle; */
+    /* top: 0; */
+    /* right: 0; */
+    /* bottom: 0; */
+    /* left: 0; */
+
+    /* margin-top: 25px; */
+    /* transform: scale(0.45); */
+    /* transform-origin: 0% 50%; */
+    /* text-align: center; */
     /* transform: scale(0.45) */
-    /* line-height: 20px; */
+    /* line-height: 30px; */
     /* vertical-align: middle; */
 }
 
@@ -365,7 +382,7 @@ input[type=number] {
 
 textarea {
     width: 661px;
-    height: 136px;
+    height: 135px;
     resize: none;
     display: inline-block;
     position: absolute;
@@ -444,4 +461,65 @@ input[type=submit] {
 
 .contact-heading-4 {
     margin-top: 54px;
+}
+
+.logo-qbcc {
+    /* display: table-cell; */
+    /* width: auto; */
+    /* height: auto; */
+}
+
+.logo-australia {
+    /* display: table-cell; */
+    /* width: auto; */
+    /* height: auto; */
+}
+
+.logo-award {
+    /* display: table-cell; */
+}
+
+.footer-logos {
+    height: 165px;
+}
+
+.footer-logos-internal {
+    width: 600px;
+    height: 165px;
+    margin: 0 auto;
+    position: relative;
+    display: table;
+}
+
+.footer-logos-internal img {
+    display: table-cell;
+}
+
+.logo-qbcc-wrapper {
+    width: 148px;
+    height: 165px;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.logo-australia-wrapper {
+    width: 202px;
+    height: 165px;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 0 auto;
+}
+
+.logo-award-wrapper {
+    width: 144px;
+    height: 165px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
