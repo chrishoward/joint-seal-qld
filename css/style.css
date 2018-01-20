@@ -28,6 +28,10 @@
     color: green;
 } */
 
+/***************** Media Query, >700px ***************** */
+
+@media only screen and (min-width: 700px) {
+
 body {
     font-family: 'clobber-grotesk-medium', 'Trebuchet MS', sans-serif;
     color: #323232;
@@ -181,13 +185,6 @@ header {
     font-weight: bold;
 }
 
-.header-nav-ul {
-    /* vertical-align: middle; */
-    /* margin-top: auto; */
-    padding-top: 11px;
-    margin-right: 17px;
-}
-
 .header-nav {
     height: 37px;
     width: 100%;
@@ -199,10 +196,19 @@ header {
     box-sizing: border-box;
 }
 
+.header-nav-ul {
+    /* vertical-align: middle; */
+    /* margin-top: auto; */
+    display: flex;
+    justify-content: space-around;
+    padding-top: 11px;
+    /* margin-right: 17px; */
+}
+
 .nav-list-item {
-    display: inline-block;
-    width: 23.6%;
-    text-align: center;
+    /* display: inline-block; */
+    /* width: 23.6%; */
+    /* text-align: center; */
     /* vertical-align: middle; */
     /* margin: 0 1em; */
 }
@@ -214,6 +220,11 @@ header {
 
 .nav-list-item a:hover {
     color: #077EBE;
+}
+
+.current-page a {
+    text-decoration: underline;
+    /* color: #077EBE; */
 }
 
 .contact {
@@ -719,3 +730,5 @@ main {
 .footer-info a:hover {
     color: #fff;
 } */
+
+}
