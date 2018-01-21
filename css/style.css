@@ -28,10 +28,6 @@
     color: green;
 } */
 
-/***************** Media Query, >700px ***************** */
-
-@media only screen and (min-width: 700px) {
-
 body {
     font-family: 'clobber-grotesk-medium', 'Trebuchet MS', sans-serif;
     color: #323232;
@@ -229,7 +225,6 @@ header {
 
 .contact {
     width: 939px;
-    height: 808px;
     box-sizing: border-box;
     padding-top: 40px;
     box-shadow: 0px 1px 5px rgba(0,0,0,0.25);
@@ -356,13 +351,12 @@ header {
     font-size: 18px;
     color: rgba(0,0,0,0.8);
     padding-left: 8px; 
-    width: 210px;
     height: 40px;
     background-color: #fff;
     opacity: 0.8;
     border: 1px solid #b4b4b4;
     box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.2);
-    display: inline-block;
+    /* display: inline-block; */
     box-sizing: border-box;
     /* padding-top: 5px; */
     /* opacity: 0.6; */
@@ -393,36 +387,7 @@ header {
     /* vertical-align: middle; */
 }
 
-input[type=text] {
-    display: inline-block;
-    /* margin: 0 auto; */
-    position: absolute;
-    top: 0;
-    /* right: 0; */
-    /* bottom: 0; */
-    left: 0;
-}
 
-input[type=email] {
-    display: inline-block;
-    margin: 0 auto;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-
-}
-
-input[type=tel] {
-    display: inline-block;
-    /* margin: 0 auto; */
-    position: absolute;
-    top: 0;
-    right: 0;
-    /* bottom: 0; */
-    /* left: 0; */
-}
 
 textarea {
     font-family: 'clobber-grotesk-medium', 'Trebuchet MS', sans-serif;
@@ -431,14 +396,15 @@ textarea {
     padding-left: 8px;
     padding-top: 5px;
     width: 661px;
+    min-width: 95%;
     height: 135px;
     resize: none;
-    display: inline-block;
-    position: absolute;
+    display: block;
+    /* position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
-    left: 0;
+    left: 0; */
     /* opacity: 0.2; */
     line-height: 25px;
     margin-left: auto;
@@ -483,13 +449,15 @@ input[type=submit] {
 
 .message-and-submit {
     width: 661px;
-    height: 198px;
-    display: inline-block;
-    position: absolute;
+    /* max-width: 95%; */
+    height: 196px;
+    display: block;
+    position: relative;
+    /* position: absolute; */
     /* top: 0; */
-    right: 0;
-    bottom: 0;
-    left: 0;
+    /* right: 0; */
+    /* bottom: 0; */
+    /* left: 0; */
     margin-left: auto;
     margin-right: auto;
     /* padding-top: -50px; */
@@ -731,4 +699,104 @@ main {
     color: #fff;
 } */
 
+/***************** Media Query, between ###px and 700px ***************** */
+
+@media only screen and (min-width: 300px) and (max-width: 700px) {
+
+    .header-cartoon {
+        display: none;
+    }
+
+    .contact {
+        height: 1000px;
+    }
+
+    .contact-details {
+        width: 300px;
+    }
+
+    input[type=text] {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 13px;
+        /* float: */
+        /* position: absolute; */
+        /* top: 0; */
+        /* right: 0; */
+        /* bottom: 0; */
+        /* left: 0; */
+    }
+    
+    input[type=email] {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 13px;
+        /* position: absolute; */
+        /* top: 0; */
+        /* right: 0; */
+        /* bottom: 0; */
+        /* left: 0; */
+    }
+    
+    input[type=tel] {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 13px;
+        /* position: absolute; */
+        /* top: 0; */
+        /* right: 0; */
+        /* bottom: 0; */
+        /* left: 0; */
+    }
+}
+
+/***************** Media Query, >700px ***************** */
+
+@media only screen and (min-width: 700px) {
+
+    .contact {
+        height: 808px;
+    }
+
+    .contact-details {
+        width: 210px;
+    }
+
+    input[type=text] {
+        display: inline-block;
+        /* margin: 0 auto; */
+        position: absolute;
+        top: 0;
+        /* right: 0; */
+        /* bottom: 0; */
+        left: 0;
+    }
+    
+    input[type=email] {
+        display: inline-block;
+        margin: 0 auto;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    
+    }
+    
+    input[type=tel] {
+        display: inline-block;
+        /* margin: 0 auto; */
+        position: absolute;
+        top: 0;
+        right: 0;
+        /* bottom: 0; */
+        /* left: 0; */
+    }
+
+    .message-and-submit {
+        padding-top: 60px;
+    }
 }
