@@ -338,6 +338,7 @@ header {
 
 #home form {
     width: 661px;
+    max-width: 100%;
     height: 266px;
     margin: 0 auto;
     /* display: block; */
@@ -396,7 +397,7 @@ textarea {
     padding-left: 8px;
     padding-top: 5px;
     width: 661px;
-    min-width: 95%;
+    /* min-width: 95%; */
     height: 135px;
     resize: none;
     display: block;
@@ -449,7 +450,8 @@ input[type=submit] {
 
 .message-and-submit {
     width: 661px;
-    /* max-width: 95%; */
+    max-width: 90vw;
+    /* max-width: 96%; */
     height: 196px;
     display: block;
     position: relative;
@@ -699,7 +701,98 @@ main {
     color: #fff;
 } */
 
-/***************** Media Query, between ###px and 700px ***************** */
+/***************** Media Query, Less than 560px ***************** */
+
+@media only screen and (max-width: 560px) {
+
+    .header {
+        background-image: none;
+    }
+
+    .header-cartoon {
+        display: none;
+    }
+
+    .header-info-wrapper {
+        margin-top: 0px;
+    }
+
+    .header-info-wrapper img {
+        max-width: 90vw;
+        height: auto;
+        margin-top: 1vw;
+        margin-bottom: 5px;
+    }
+
+    .header-contact-info {
+        border-top: 1px dashed blue;
+        border-bottom: 1px dashed blue;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .header-mobile {
+        display: block;
+        margin: 0 auto;
+        padding-bottom: 5px;
+        float: none;
+        /* font-size: em; */
+    }
+
+    .header-email {
+        display: block;
+        margin: 0 auto;
+        float: none;
+    }
+
+    .header-nav {
+        height: auto;
+        width: auto;
+        background-color: #fff;
+        /* border-radius: 5px; */
+        border: none;
+        box-shadow: none;
+        margin-top: 0px;
+        box-sizing: border-box;
+    }
+    
+    .header-nav-ul {
+
+        /* vertical-align: middle; */
+        /* margin-top: auto; */
+        display: block;
+        /* justify-content: space-around; */
+        padding-top: 11px;
+        /* margin-right: 17px; */
+    }
+    
+    .nav-list-item {
+        border-top: 1px solid rgba(0,0,0,0.25);
+        border-bottom: 1px solid rgba(0,0,0,0.25);
+        padding: 10px 0px 10px 0px;
+        /* display: block; */
+        /* width: 23.6%; */
+        /* text-align: center; */
+        /* vertical-align: middle; */
+        /* margin: 0 1em; */
+    }
+    
+    .nav-list-item a,a:link {
+        text-decoration: none;
+        color: #323232;
+    }
+    
+    .nav-list-item a:hover {
+        color: #077EBE;
+    }
+
+    .footer-logos {
+        display: none;
+    }
+
+}
+
+/***************** Media Query, 560px to 700px ***************** */
 
 @media only screen and (min-width: 300px) and (max-width: 700px) {
 
@@ -719,7 +812,7 @@ main {
         display: block;
         margin-left: auto;
         margin-right: auto;
-        margin-bottom: 13px;
+        margin-bottom: 20px;
         /* float: */
         /* position: absolute; */
         /* top: 0; */
@@ -732,7 +825,7 @@ main {
         display: block;
         margin-left: auto;
         margin-right: auto;
-        margin-bottom: 13px;
+        margin-bottom: 20px;
         /* position: absolute; */
         /* top: 0; */
         /* right: 0; */
@@ -744,7 +837,7 @@ main {
         display: block;
         margin-left: auto;
         margin-right: auto;
-        margin-bottom: 13px;
+        margin-bottom: 20px;
         /* position: absolute; */
         /* top: 0; */
         /* right: 0; */
@@ -753,7 +846,7 @@ main {
     }
 }
 
-/***************** Media Query, >700px ***************** */
+/***************** Media Query, Larger than 700px ***************** */
 
 @media only screen and (min-width: 700px) {
 
