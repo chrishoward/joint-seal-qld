@@ -1,17 +1,77 @@
 <?php
-    // if (isset($_POST['name'])) {
-    //     echo "Test";
-    // }
+    // Define variables and set values
+    $name = $email = $tel = $message = "";
+    $nameError = $emailError = $telError = $emailTelError = $messageError = "";
 
-    echo "hello world";
-?>
+    if ( isset($_POST['submit']) ) {   
+        
+        // Check if input fields are empty and display relevant error message
+        if (empty($_POST["name"])) {
+            $nameError = "Please enter your name";
+        } else {
+            $name = sanitize($_POST["name"]);
+            if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
+                $nameError = "Only letters and spaces allowed";
+                echo $nameError;
+            }
+        }
 
-Success
+        // if (empty($_POST["email"]) && empty($_POST["tel"])) {
+        //     $nameTelError = "Please enter your email address or phone number";
+        // } else {
+        //     $email = sanitize($_POST["name"]);
+        // }
 
-<?php
-    // if (isset($_POST['name'])) {
-    //     echo "Test";
-    // }
+        switch (true) {
+            case (empty($_POST["email"]) && empty($_POST["tel"])):
+                $emailTelError = "Please enter your email address or phone number";
+                // echo "both empty";
+                break;
+            case (!empty($_POST["email"]) && empty($_POST["tel"])):
+                $email = sanitize($_POST["email"]);
+                if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                    $emailError = "Invalid email format";
+                }
+                // echo "tel empty";
+                break;
+            case (empty($_POST["email"]) && !empty($_POST["tel"])):
+                $tel = sanitize($_POST["tel"]);
+                if (!preg_match("/^[0-9 ]*$/",$tel)) {
+                    $telError = "Only numbers and spaces allowed";
+                }
+                // echo "email empty";
+                break;
+            case (!empty($_POST["email"]) && !empty($_POST["tel"])):
+                $email = sanitize($_POST["email"]);
+                $tel = sanitize($_POST["tel"]);
+                // echo "neither empty";
+                break;
+        }
 
-    echo "hello world";
+        if (empty($_POST["message"])) {
+            $messageError = "Please enter your message";
+        } else {
+            $message = sanitize($_POST["message"]);
+        }
+    }
+
+// Define function to sanitize field inputs for security purposes
+function sanitize($inputField) {
+    $inputField = htmlspecialchars($inputField);
+    $inputField = trim($inputField);
+    $inputField = stripslashes($inputField);
+    return $inputField;
+}
+
+            // // Sanitize all field inputs
+            // $name = sanitize($_POST["name"]);
+            // $email = sanitize($_POST["email"]);
+            // $tel = sanitize($_POST["tel"]);
+            // $message = sanitize($_POST["message"]);
+        
+            // echo $name . "<br>";
+            // echo $email . "<br>";
+            // echo $tel . "<br>";
+            // echo $message . "<br>";
+
 ?>
