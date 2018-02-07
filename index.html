@@ -1,7 +1,5 @@
 <!-- PHP Contact Form Processing -->
-<?php 
-    include 'contact.php';
-?>
+<?php include 'contact.php'; ?>
 
 <!-- Doctype Declaration -->
 <!doctype html>
@@ -28,37 +26,26 @@
         <!-- Meta description, maximum 150 characters -->
         <meta name="description" content="Description of the page less than 150 characters">
         <!-- Standard favicon -->
-        <link rel="icon" type="image/x-icon" href="https://example.com/favicon.ico">
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
         <!-- Recommended favicon format, png is recommended format -->
-        <link rel="icon" type="image/png" href="https://example.com/favicon.png">
-        <!-- Apple Touch Icon (at least 200x200px) -->
-        <link rel="apple-touch-icon" href="/custom-icon.png">
-        <!-- To run web application in full-screen -->
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <!-- Status bar style, has no effect without the above meta tag -->
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <!-- Microsoft tiles -->
-        <meta name="msapplication-config" content="browserconfig.xml">
-        <!-- Helps prevent duplicate content issues -->
-        <link rel="canonical" href="http://example.com/2017/09/a-new-article-to-read.html">
+        <link rel="icon" type="image/png" href="images/favicon.png">
         <!-- Prevent Mobile Safari from detecting phone numbers and converting to links with link styling -->
         <meta name="format-detection" content="telephone=no">
     </head>
 
     <!-- ******************************************** Body ******************************************** -->
+    <!-- NTS Use unique IDs for each page -->
     <body id="home">
         <div class="wrapper">
-            <!-- <p>Test</p> -->
-            <!-- NTS Use unique IDs for each page -->
 
             <!-- ******************************************** Header ******************************************** -->
-            <header class="header" role="banner">
+            <header class="header">
                 <div class="header-content-wrapper">
-                    <!-- <p>Test</p> -->
+
+                    <!-- ******************************************** Header (Cartoon, Business Title, Contact Info) ******************************************** -->
                     <a href="index.html">
                         <img class="header-cartoon" src="images/header-cartoon.png" alt="caricature">
                     </a>
-                    <!-- <p>Test</p> -->
                     <div class="header-info-wrapper">
                         <a href="index.html">
                             <img src="images/header-business-name.svg" alt="Joint Seal Queensland">
@@ -67,11 +54,13 @@
                             <a href="tel:0422508313">
                                 <p class="header-mobile">0422 508 313</p>
                             </a>
-                            <a href="mailto:info@jointsealqld.com.au?Subject=Customer%20Enquiry" target="_blank">
+                            <a href="mailto:info@jointsealqld.com.au?Subject=Customer%20Enquiry" target="_blank" rel="noopener">
                                 <p class="header-email">info<span>@</span>jointsealqld.com.au</p>
                             </a>
                         </div>
-                        <nav class="header-nav" role="navigation">
+
+                        <!-- ******************************************** Header Navigation Bar ******************************************** -->
+                        <nav class="header-nav">
                             <ul class="header-nav-ul">
                                 <a href="index.html">
                                     <li class="nav-list-item current-page"><p>HOME</p></li>
@@ -92,7 +81,7 @@
             </header>
 
             <!-- ******************************************** Main ******************************************** -->
-            <main role="main">
+            <main>
                 <article>
                     <section>
                         <br>
@@ -137,6 +126,8 @@
             <!-- ******************************************** Contact Section ******************************************** -->
             <section class="contact">
                 <h1>We can help, let's talk about your project</h1>
+
+                <!-- ******************************************** Contact (Call Button) ******************************************** -->
                 <h1 class="contact-heading-2">Give us a call.</h1>
                 <a href="tel:0422508313">
                     <div class="call-button">
@@ -146,31 +137,43 @@
                         </div>
                     </div>
                 </a>
+
+                <!-- ******************************************** Contact (Email Button) ******************************************** -->
                 <h1 class="contact-heading-3">Send us an email.</h1>
-                <a href="mailto:info@jointsealqld.com.au?Subject=Customer%20Enquiry" target="_blank">
+                <a href="mailto:info@jointsealqld.com.au?Subject=Customer%20Enquiry" target="_blank" rel="noopener">
                     <div class="email-button">
                         <img src="images/email.png" alt="email-icon">
-                        <!-- <div class="email-button-bg"> -->
                         <p>info@jointsealqld.com.au</p>
-                        <!-- </div> -->
                     </div>
                 </a>
+
+                <!-- ******************************************** Contact (Contact Form) ******************************************** -->
                 <h1 class="contact-heading-4">Send us an email via our website.</h1>
                 <p class="contact-instruction">Please provide your preferred contact details (email address or phone number or both).</p>
-                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
-                    <input class="contact-details" type="text" name="name" aria-label="Enter name" placeholder="Name" value="<?php echo $name;?>">
-                    <!-- Needs to be configured to have email OR phone number required, also to check format of entries are correct (no letters in tel field etc.) -->
-                    <input class="contact-details" type="email" name="email" aria-label="Enter email" placeholder="Email" value="<?php echo $email;?>">
+                <form id="contact-form" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>#contact-form" method="POST">                              <!-- When form is submitted reload current page and scroll down to form -->
+                    <input class="contact-details" type="text" name="name" aria-label="Enter name" placeholder="Name" value="<?php echo $name;?>"> 
+                    <input class="contact-details" type="email" name="email" aria-label="Enter email" placeholder="Email" value="<?php echo $email;?>">         <!-- Use of php echo $variable is to ensure the user input stays in the form after the submit button is clicked -->
                     <input class="contact-details" type="tel" name="tel" aria-label="Enter telephone number" placeholder="Phone" value="<?php echo $tel;?>">
                     <div class="message-and-submit">
                         <textarea name="message" aria-label="Enter message" placeholder="Message"><?php echo $message;?></textarea>
                         <input type="submit" name="submit" value="Send Message">
                     </div>
                 </form>
+                <!-- Display of status/error messages based on user input in contact form -->
+                <div class="contact-error">      
+                    <?php echo $nameError; ?>
+                    <?php echo $emailTelError; ?>
+                    <?php echo $emailError; ?>
+                    <?php echo $telErrorFormat; ?>
+                    <?php echo $telErrorLength; ?>
+                    <?php echo $messageError; ?>
+                    <?php echo $contactSendStatus; ?>
+                </div>
             </section>
 
-
+            <!-- ******************************************** Footer ******************************************** -->
             <footer>
+                
                 <!-- ******************************************** Footer (Logos) ******************************************** -->
                 <section class="footer-logos">
                     <div class="footer-logos-internal">
@@ -195,7 +198,7 @@
                     </div>
                 </section>
 
-                <!-- ******************************************** Footer (Links) ******************************************** -->
+                <!-- ******************************************** Footer (Links and Copyright) ******************************************** -->
                 <section class="footer-links">
                     <ul>
                         <li>
@@ -219,14 +222,7 @@
                         </span>
                     </p>
                 </section>
-
-                <!-- ******************************************** Footer (Copyright & Developed By) ******************************************** -->
-                <!-- <section class="footer-info"> -->
-                    
-                <!-- </section> -->
             </footer>
-
-        <!-- Close wrapper div -->
-        </div>
+        </div> <!-- Close wrapper div -->
     </body>
 </html>
