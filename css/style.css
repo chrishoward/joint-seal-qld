@@ -1,5 +1,8 @@
 /* Stylesheet */
 
+
+
+
 /* Webfont format, use lower case letters in url to avoid unexpected results in IE */
 @font-face {
     font-family: 'clobber-grotesk-medium';
@@ -227,6 +230,7 @@ header {
     width: 939px;
     box-sizing: border-box;
     padding-top: 40px;
+    padding-bottom: 13px;
     box-shadow: 0px 1px 5px rgba(0,0,0,0.25);
     /* box-shadow: 0px 2px 7px rgba(0,0,0,0.25); */
     /* text-align:  */
@@ -392,7 +396,7 @@ header {
 
 textarea {
     font-family: 'clobber-grotesk-medium', 'Trebuchet MS', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     color: rgba(0,0,0,0.8);
     padding-left: 8px;
     padding-top: 5px;
@@ -438,8 +442,10 @@ input[type=submit] {
     display: inline-block;
     position: absolute;
     border: none;
-    bottom: 0;
     right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0 auto;
     font-family: 'clobber-grotesk-medium', 'Trebuchet MS', sans-serif;
     font-size: 22px;
     color: #fff;
@@ -462,6 +468,7 @@ input[type=submit] {
     /* left: 0; */
     margin-left: auto;
     margin-right: auto;
+    /* margin-bottom: 20px; */
     /* padding-top: -50px; */
     /* margin-top: auto; */
     /* margin-bottom: 0; */
@@ -685,6 +692,13 @@ main {
     box-shadow: 0px 1px 5px rgba(0,0,0,0.25);
 }
 
+.contact-error {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+}
+
 /* .footer-info {
     position: relative;
     width: 939px;
@@ -891,7 +905,7 @@ main {
     }
 
     .contact {
-        height: 1000px;
+        /* height: 1000px; */
     }
 
     .contact-heading-4, .contact-instruction {
@@ -905,6 +919,10 @@ main {
     .contact-details {
         max-width: 95%;
         width: 300px;
+    }
+
+    #home form {
+        height: 375px;
     }
 
     input[type=text] {
@@ -991,7 +1009,7 @@ main {
     }
 
     .contact {
-        height: 1000px;
+        /* height: 927px; */
     }
 
     .contact-details {
@@ -1003,6 +1021,10 @@ main {
         margin-left: auto;
         margin-right: auto;
         /* text-align: center; */
+    }
+
+    #home form {
+        height: 375px;
     }
 
     input[type=text] {
@@ -1050,9 +1072,7 @@ main {
         /* bottom: 0; */
         left:  0;
         /* transform: translateY(-50%); */
-    }
-
-    
+    }   
 }
 
 /***************** Media Query, Larger than 700px ***************** */
@@ -1065,7 +1085,7 @@ main {
     }
 
     .contact {
-        height: 808px;
+        /* height: 808px; */
     }
 
     .contact-details {
