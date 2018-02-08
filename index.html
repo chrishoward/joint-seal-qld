@@ -7,12 +7,16 @@
 <!-- Html -->
 <html lang="en" dir="ltr">
     
-    <!-- ******************************************** Head ******************************************** -->
+    <!-- ********************************************* Head ******************************************** -->
     <head>
         <!-- Stylesheet, Reset -->
         <link rel="stylesheet" type="text/css" href="css/reset.css">
-        <!-- Stylesheet, Main-->
+        <!-- Stylesheet, Main -->
         <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <!-- Stylesheet, Critical -->
+        <!-- <link rel="stylesheet" type="text/css" href="temp-working-files/critical.css"> -->
+        
         <!-- Load CSS before JS scripts -->
 
         <!-- Set character encoding for the document -->
@@ -33,16 +37,16 @@
         <meta name="format-detection" content="telephone=no">
     </head>
 
-    <!-- ******************************************** Body ******************************************** -->
+    <!-- ********************************************* Body ******************************************** -->
     <!-- NTS Use unique IDs for each page -->
     <body id="home">
         <div class="wrapper">
 
-            <!-- ******************************************** Header ******************************************** -->
-            <header class="header">
+            <!-- ******************************************** Header ******************************************* -->
+            <header>
                 <div class="header-content-wrapper">
 
-                    <!-- ******************************************** Header (Cartoon, Business Title, Contact Info) ******************************************** -->
+                    <!-- ************************* Header (Cartoon, Business Title, Contact Info) ********************** -->
                     <a href="index.html">
                         <img class="header-cartoon" src="images/header-cartoon.png" alt="caricature">
                     </a>
@@ -59,7 +63,7 @@
                             </a>
                         </div>
 
-                        <!-- ******************************************** Header Navigation Bar ******************************************** -->
+                        <!-- ************************************* Header Navigation Bar *********************************** -->
                         <nav class="header-nav">
                             <ul class="header-nav-ul">
                                 <a href="index.html">
@@ -80,7 +84,7 @@
                 </div>
             </header>
 
-            <!-- ******************************************** Main ******************************************** -->
+            <!-- ********************************************* Main ******************************************** -->
             <main>
                 <article>
                     <section>
@@ -120,25 +124,26 @@
 
                 <aside>
 
+                    
                 </aside>
             </main>
 
-            <!-- ******************************************** Contact Section ******************************************** -->
+            <!-- *************************************** Contact Section *************************************** -->
             <section class="contact">
                 <h1>We can help, let's talk about your project</h1>
 
-                <!-- ******************************************** Contact (Call Button) ******************************************** -->
+                <!-- ************************************* Contact (Call Button) *********************************** -->
                 <h1 class="contact-heading-2">Give us a call.</h1>
                 <a href="tel:0422508313">
                     <div class="call-button">
                         <img src="images/phone.png" alt="phone-icon">
                         <div class="call-button-bg">
-                                    <p>0422 508 313</p>
+                            <p>0422 508 313</p>
                         </div>
                     </div>
                 </a>
 
-                <!-- ******************************************** Contact (Email Button) ******************************************** -->
+                <!-- ************************************* Contact (Email Button) ********************************** -->
                 <h1 class="contact-heading-3">Send us an email.</h1>
                 <a href="mailto:info@jointsealqld.com.au?Subject=Customer%20Enquiry" target="_blank" rel="noopener">
                     <div class="email-button">
@@ -147,7 +152,7 @@
                     </div>
                 </a>
 
-                <!-- ******************************************** Contact (Contact Form) ******************************************** -->
+                <!-- ************************************* Contact (Contact Form) ********************************** -->
                 <h1 class="contact-heading-4">Send us an email via our website.</h1>
                 <p class="contact-instruction">Please provide your preferred contact details (email address or phone number or both).</p>
                 <form id="contact-form" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>#contact-form" method="POST">                              <!-- When form is submitted reload current page and scroll down to form -->
@@ -171,26 +176,26 @@
                 </div>
             </section>
 
-            <!-- ******************************************** Footer ******************************************** -->
+            <!-- ******************************************** Footer ******************************************* -->
             <footer>
                 
-                <!-- ******************************************** Footer (Logos) ******************************************** -->
+                <!-- **************************************** Footer (Logos) *************************************** -->
                 <section class="footer-logos">
                     <div class="footer-logos-internal">
                         <div class="logo-qbcc-wrapper">
-                            <div class="img-qbcc-wrapper">
+                            <div class="img-logo-wrapper">
                                 <img class="logo-qbcc" src="images/logo-qbcc.png" alt="QBCC logo">
                             </div>
-                                <p>License No. 15012136</p>
+                            <p>License No. 15012136</p>
                         </div>
                         <div class="logo-australia-wrapper">
-                            <div class="img-qbcc-wrapper">
+                            <div class="img-logo-wrapper">
                                 <img class="logo-australia" src="images/logo-australia.png" alt="australia logo">
                             </div>
                             <p>Australian Owned &amp; Operated</p>
                         </div>
                         <div class="logo-award-wrapper">
-                            <div class="img-qbcc-wrapper">
+                            <div class="img-logo-wrapper">
                                 <img class="logo-award" src="images/logo-award.png" alt="years of operation logo">
                             </div>
                             <p>ABN: 58 671 341 758</p>
@@ -198,7 +203,7 @@
                     </div>
                 </section>
 
-                <!-- ******************************************** Footer (Links and Copyright) ******************************************** -->
+                <!-- ********************************** Footer (Links and Copyright) ******************************* -->
                 <section class="footer-links">
                     <ul>
                         <li>
