@@ -1,7 +1,6 @@
-/* Stylesheet */
+/* Main Layout Stylesheet */
 
-
-
+/******************************************** Global *******************************************/
 
 /* Webfont format, use lower case letters in url to avoid unexpected results in IE */
 @font-face {
@@ -12,24 +11,25 @@
     font-style: normal;
 }
 
-/* Show outline around all elements for clarity purposes when previewing */
+/* Set max-width: 100; for all elements */
 * {
-    /* outline: 1px solid rgb(255, 0, 234); */
     max-width: 100%;
-}
+}    
 
-/* Show div id/class names for clarity purposes when previewing */
-/* *:before {http://amaysi.ms/r/qQkJP8dJz
+/* Show div id/class names for clarity purposes if required when developing */
+/* *:before {
     content: attr(class);
     position: absolute;
     color: green;
-}
+} */    
 
-*:after {
+/* *:after {
     content: attr(class);
     position: absolute;
     color: green;
-} */
+}  */ 
+
+/********************************************* Body ********************************************/
 
 body {
     font-family: 'clobber-grotesk-medium', 'Trebuchet MS', sans-serif;
@@ -37,1108 +37,890 @@ body {
     max-width: 100%;
 }
 
-.wrapper {
-    position: relative;
-    margin: 0 auto;
-    width: 939px;
-    /* padding-top: 100px; */
-    /* height: 500px; */
-    max-width: 100%;
-    background: #fff;
-    box-shadow: 0px 2px 7px rgba(0,0,0,0.25);
-    /* box-sizing: border-box; */
-    /* position: relative; */
-}
-
-header {
-    display: block;
-    position: relative;
-    max-width: 100%;
-    /* top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0; */
-    width: 939px;
-    height: 235px;
-    /* min-width: 70%; */
-    /* padding-top: 25%; */
-    /* height: 235px; */
-    /* max-width: 100%; */
-    margin: 0 auto;
-    /* padding-top: 100px; */
-    /* max-width: 100%; */
-    text-align: center;
-    background: url("../images/header-bg.png") no-repeat top center;
-    /* display: inline-; */
-    box-shadow: 0px 2px 4px rgba(0,0,0,0.25);
-    /* width: 939px; */
-    /* background: url("../images/header-bg.png"); */
-    /* background-repeat: no-repeat; */
-    /* background-size: contain; */
-    /* height: 235px; */
-    /* background-color: #fff; */
-    /* position: relative; */
-}
-
-.header-content-wrapper {
-    display: block;
-    width: 680px;
-    height: 220px;
-    position: absolute;
-    top: 50%;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    /* margin-top: 100%; */
-    transform: translateY(-50%);
-    margin-left: auto;
-    margin-right: auto;
-    /* display: inline-block; */
-    /* width: 657px; */
-    /* height: 227px; */
-    /* margin: 0 auto; */
-    /* background: #fff; */
-    /* max-width: 100%; */
-    /* position: absolute; */
-    /* left: 50%; */
-    /* right: 50%; */
-    /* margin-left: -250px; */
-    /* margin-top: -250px; */
-}
-
-.header-cartoon {
-    /* width: 178px; */
-    /* height: 227px; */
-    display: inline;
-    /* display: inline-block; */
-    /* float: left; */
-    /* position: absolute; */
-}
-
-.header-info-wrapper {
-    width: 494px;
-    /* height: 100px; */
-    /* float: left; */
-    display: inline-block;
-    vertical-align: top;
-    /* padding-bottom: 20px; */
-    /* padding-top: 20px; */
-    /* margin-left: 32%; */
-    margin-top: 15px;
-    /* padding-top: 9%; */
-    /* margin-top: 1%; */
-    /* position: relative; */
-    /* top: 0; */
-    /* left: 0; */
-    /* bottom: 0; */
-    /* right: 0; */
-    /* padding-top: 25%; */
-    /* float: left; */
-}
-
-.header-info-wrapper img {
-    width: 457px;
-    height: 108px;
-    /* border: 1px solid grey; */
-    /* padding-top: 4%; */
-    /* width: 20%; */
-    /* position: absolute; */
-    /* top: 0; */
-    /* left: 0; */
-    /* bottom: 0; */
-    /* right: 0; */
-    /* display: block; */
-    /* margin: 0 auto; */
-    /* margin-top: 4%; */
-    /* position: relative; */
-}
-
-.header-contact-info {
-    display: inline-block;
-    width: 457px;
-    margin-top: 3px;
-    /* position: absolute; */
-    /* top: 0; */
-    /* left: 0; */
-    /* bottom: 0; */
-    /* right: 0; */
-}
-
-.header-mobile {
-    /* display: inline-block; */
-    float: left;
-    font-size: 22px;
-    /* font-weight: bold; */
-    color: #323232;
-}
-
-.header-mobile:hover {
-    color: #077EBE;
-}
-
-.header-email {
-    /* display: inline-block; */
-    float: right;
-    font-size: 22px;
-    /* font-weight: bold; */
-    color: #323232;
-}
-
-.header-email:hover {
-    color: #077EBE;
-}
-
-.header-email span {
-    font-weight: bold;
-}
-
-.header-nav {
-    height: 37px;
-    width: 100%;
-    background-color: #f2f2f2;
-    border-radius: 5px;
-    border: 1px solid #A69B9B;
-    box-shadow: 0px 3px 4px rgba(0,0,0,0.25);
-    margin-top: 11px;
-    box-sizing: border-box;
-}
-
-.header-nav-ul {
-    /* vertical-align: middle; */
-    /* margin-top: auto; */
-    display: flex;
-    justify-content: space-around;
-    padding-top: 11px;
-    /* margin-right: 17px; */
-}
-
-.header-nav-ul a, .header-nav-ul a:link {
-    text-decoration: none;
-    color: #323232;
-}
-
-.header-nav-ul a:hover {
-    color: #077EBE;
-}
-
-.current-page {
-    text-decoration: underline;
-    /* color: #077EBE; */
-}
-
-.contact {
-    width: 939px;
-    box-sizing: border-box;
-    padding-top: 40px;
-    padding-bottom: 13px;
-    box-shadow: 0px 1px 5px rgba(0,0,0,0.25);
-    /* box-shadow: 0px 2px 7px rgba(0,0,0,0.25); */
-    /* text-align:  */
-    /* float: center; */
-    /* align: center; */
-}
-
-.contact h1 {
-    font-size: 26px;
-    text-align: center;
-    /* margin: 0 auto; */
-}
-
-.contact p {
-    font-size: 14px;
-    text-align: center;
-}
-
-.call-button {
-    width: 289px;
-    height: 79px;
-    margin: 0 auto;
-    position: relative;
-    margin-top: 4px;
-}
-
-.call-button-bg {
-    width: 285px;
-    height: 56px;
-    background: linear-gradient(rgba(98, 174, 215, 1), rgba(7, 126, 190, 1));
-    border: 2px solid rgba(6, 118, 179, 1);
-    border-radius: 25px;
-    box-sizing: border-box;
-    /* padding-top: auto; */
-    margin: auto;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    /* overflow: auto; */
-    /* vertical-align: middle; */
-    /* display: inline-block; */
-}
-
-.call-button-bg p {
-    width: 206px;
-    height: 30px;
-    color: #fff;
-    font-size: 30px;
-    text-align: center;
-    text-shadow: -2px -2px 4px rgba(0, 0, 0, 0.25); 
-    margin-left: 56px;
-    margin-top: 10px;
-    /* padding-left: 40px; */
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    /* vertical-align: middle; */
-}
-
-.call-button img {
-    position: absolute;
-    top: 0px;
-    left: 11px;
-    z-index: 1;
-} 
-
-.email-button {
-    width: 365px;
-    height: 56px;
-    margin: 0 auto;
-    position: relative;
-    background-color: #077EBE;
-    border-radius: 25px;
-    margin-top: 14px;
-}
-
-.email-button img {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: 20px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-}
-
-.email-button p {
-    width: 263px;
-    height: 24px;
-    color: #fff;
-    font-size: 22px;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: 82px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-}
-
-#home form {
-    width: 661px;
-    max-width: 100%;
-    height: 257px;
-    margin: 0 auto;
-    /* display: block; */
-    position: relative;
-    margin-top: 23px;
-}
-
-.contact-details {
-    border-radius: 5px;
-    font-family: 'clobber-grotesk-medium', 'Trebuchet MS', sans-serif;
-    font-size: 18px;
-    color: rgba(0,0,0,0.8);
-    padding-left: 8px; 
-    height: 40px;
-    background-color: #fff;
-    opacity: 0.8;
-    border: 1px solid #b4b4b4;
-    box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.2);
-    /* display: inline-block; */
-    box-sizing: border-box;
-    /* padding-top: 5px; */
-    /* opacity: 0.6; */
-}
-
-.contact-details::placeholder {
-    /* height: 80px; */
-    font-family: 'clobber-grotesk-medium', 'Trebuchet MS', sans-serif;
-    font-size: 20px;
-    /* padding-left: 8px; */
-    color: rgba(0,0,0,0.25);
-    /* position: absolute; */
-    /* text-transform: uppercase; */
-    /* line-height: 60px; */
-    /* display: inline-block; */
-    /* vertical-align: middle; */
-    /* top: 0; */
-    /* right: 0; */
-    /* bottom: 0; */
-    /* left: 0; */
-
-    /* margin-top: 25px; */
-    /* transform: scale(0.45); */
-    /* transform-origin: 0% 50%; */
-    /* text-align: center; */
-    /* transform: scale(0.45) */
-    /* line-height: 30px; */
-    /* vertical-align: middle; */
-}
-
-
-
-textarea {
-    font-family: 'clobber-grotesk-medium', 'Trebuchet MS', sans-serif;
-    font-size: 18px;
-    color: rgba(0,0,0,0.8);
-    padding-left: 8px;
-    padding-top: 5px;
-    width: 661px;
-    /* min-width: 95%; */
-    height: 135px;
-    resize: none;
-    display: block;
-    /* position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0; */
-    /* opacity: 0.2; */
-    line-height: 25px;
-    margin-left: auto;
-    margin-right: auto;
-    box-sizing: border-box;
-    border-radius: 5px;
-    /* border-color: rgba(0,0,0,0.2); */
-    /* color: rgba(0,0,0,0.2); */
-    border: 1px solid #b4b4b4;
-    opacity: 0.8;
-    box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.2);
-    /* margin-top: 65px; */
-}
-
-textarea::placeholder {
-    font-family: 'clobber-grotesk-medium', 'Trebuchet MS', sans-serif;
-    font-size: 20px;
-    color: rgba(0,0,0,0.26);
-    /* padding-left: 6px; */
-    /* vertical-align: middle; */
-    /* line-height: 60px; */
-    /* position: relative; */
-    /* top: 7px; */
-}
-
-input[type=submit] {
-    width: 207px;
-    height: 42px;
-    border-radius: 5px;
-    display: inline-block;
-    position: absolute;
-    border: none;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: 0 auto;
-    font-family: 'clobber-grotesk-medium', 'Trebuchet MS', sans-serif;
-    font-size: 22px;
-    color: #fff;
-    background-color: #077EBE;
-    box-sizing: border-box;
-    cursor: pointer;
-}
-
-.message-and-submit {
-    width: 661px;
-    max-width: 90vw;
-    /* max-width: 96%; */
-    height: 196px;
-    display: block;
-    position: relative;
-    /* position: absolute; */
-    /* top: 0; */
-    /* right: 0; */
-    /* bottom: 0; */
-    /* left: 0; */
-    margin-left: auto;
-    margin-right: auto;
-    /* margin-bottom: 20px; */
-    /* padding-top: -50px; */
-    /* margin-top: auto; */
-    /* margin-bottom: 0; */
-}
-
-.contact-instruction {
-    margin-top: 10px;
-}
-
-.contact-heading-2 {
-    margin-top: 48px;
-}
-
-.contact-heading-3 {
-    margin-top: 40px;
-}
-
-.contact-heading-4 {
-    margin-top: 54px;
-}
-
-.logo-qbcc {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: block;
-    /* margin-top: 20px; */
-    height: 96px;
-    margin: 0 auto;
-    top: 50%;
-    transform: translateY(-50%);
-    /* margin: auto; */
-    /* display: table-cell; */
-    /* width: auto; */
-    /* height: auto; */
-}
-
-.logo-australia {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: block;
-    /* margin-top: 20px; */
-    height: 116px;
-    margin: 0 auto;
-    top: 50%;
-    transform: translateY(-50%);
-    /* display: table-cell; */
-    /* width: auto; */
-    /* height: auto; */
-}
-
-.logo-award {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: block;
-    /* margin-top: 20px; */
-    height: 114px;
-    margin: 0 auto;
-    top: 50%;
-    transform: translateY(-50%);
-    /* display: table-cell; */
-}
-
-.footer-logos {
-    height: 165px;
-    box-shadow: 0px 1px 5px rgba(0,0,0,0.25);
-    /* box-shadow: 0px 2px 7px rgba(0,0,0,0.25); */
-}
-
-.footer-logos-internal {
-    width: 600px;
-    height: 165px;
-    margin: 0 auto;
-    position: relative;
-    /* display: table; */
-}
-
-.footer-logos-internal p {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    text-align: center;
-    font-size: 14px;
-    color: #888;
-    margin-bottom: 21px;
-}
-
-.logo-qbcc-wrapper {
-    width: 148px;
-    height: 165px;
-    display: inline-block;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-
-.logo-australia-wrapper {
-    width: 202px;
-    height: 165px;
-    display: inline-block;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    margin: 0 auto;
-}
-
-.logo-award-wrapper {
-    width: 144px;
-    height: 165px;
-    display: inline-block;
-    position: absolute;
-    right: 0;
-    top: 0;
-}
-
-.img-qbcc-wrapper {
-    height: 130px;
-    position: relative;    
-}
-
-.img-australia-wrapper {
-    height: 130px;
-    position: relative;    
-}
-
-.img-award-wrapper {
-    height: 130px;
-    position: relative;    
-}
-
-.footer-links {
-    position: relative;
-    display: block;
-    /* position: absolute; */
-    /* bottom: 0; */
-    width: 939px;
-    height: 60px;
-    background: #2d2d2d;
-    /* box-shadow: 0px 2px 7px rgba(0,0,0,0.25); */
-    /* box-shadow: -1px 0px 5px 2px rgba(0,0,0,0.25);     */
-    /* box-sizing: border-box; */
-}
-
-/* .developed-by {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    margin-right: 10px;    
-    width: 211px;
-    height: 12px;
-    color: #cfcfcf;
-    font-size: 12px;
-} */
-
-.footer-links ul {
-    display: flex;
-    align-items: stretch;
-    justify-content: space-between;
-    width: 322px;
-    height: 12px;
-    margin-left: auto;
-    margin-right: auto;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin-top: 13px;
-    /* transform: translateY(-50%); */
-    /* text-align: justify; */
-    /* overflow: auto; */
-}
-
-.footer-links li {
-    display: block;
-    flex: 0 1 auto;
-    color: #cfcfcf;
-    font-size: 12px;
-    /* font-family: 'clobber-grotesk-medium', 'Trebuchet MS', sans-serif; */
-    
-}
-
-.footer-links a {
-    text-decoration: none;
-    color: #cfcfcf;
-    font-size: 12px;
-    /* font-family: 'clobber-grotesk-medium', 'Trebuchet MS', sans-serif; */
-}
-
-.footer-links a:hover {
-    color: #fff;
-}
-
-.copyright {
-    /* position: absolute; */
-    /* top: 0; */
-    /* right: 0; */
-    /* bottom: 0; */
-    /* left: 0; */
-    /* margin-bottom: 10px; */
-    /* transform: translateY(-50%); */
-    text-align: center;
-    /* width: 192px; */
-    /* height: 12px; */
-    color: #cfcfcf;
-    font-size: 12px;
-}
-
-main {
-    box-shadow: 0px 1px 5px rgba(0,0,0,0.25);
-}
-
-.contact-error {
-    color: red;
-    font-size: 14px;
-    text-align: center;
-    margin-top: 10px;
-}
-
-/* .footer-info {
-    position: relative;
-    width: 939px;
-    height: 20px;
-    color: #cfcfcf;
-    background: #2a2a2a;
-}
-
-.footer-info a {
-    text-decoration: none;
-    color: #cfcfcf;
-    font-size: 12px;
-    font-family: 'clobber-grotesk-medium', 'Trebuchet MS', sans-serif;
-}
-
-.footer-info a:hover {
-    color: #fff;
-} */
-
-/***************** Media Query, Less than 560px ***************** */
+    .wrapper {
+        position: relative;
+        margin: 0 auto;
+        width: 939px;
+        max-width: 100%;
+        background: #fff;
+        box-shadow: 0px 2px 7px rgba(0,0,0,0.25);
+    }
+
+        /******************************************** Header *******************************************/
+
+        header {
+            display: block;
+            position: relative;
+            max-width: 100%;
+            width: 939px;
+            height: 235px;
+            margin: 0 auto;
+            text-align: center;
+            background: url("../images/header-bg.png") no-repeat top center;
+            box-shadow: 0px 2px 4px rgba(0,0,0,0.25);
+        }
+
+            .header-content-wrapper {
+                display: block;
+                width: 680px;
+                height: 220px;
+                position: absolute;
+                top: 50%;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                transform: translateY(-50%);
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+                .header-content-wrapper a {
+                    text-decoration: none;
+                }
+
+                /************************* Header (Cartoon, Business Title, Contact Info) **********************/
+
+                .header-cartoon {
+                    display: inline;
+                }
+
+                .header-info-wrapper {
+                    width: 494px;
+                    display: inline-block;
+                    vertical-align: top;
+                    margin-top: 15px;
+                }
+
+                    .header-info-wrapper img {
+                        width: 457px;
+                        height: 108px;
+                    }
+
+                    .header-contact-info {
+                        display: inline-block;
+                        width: 457px;
+                        margin-top: 3px;
+                    }
+
+                        .header-mobile {
+                            float: left;
+                            font-size: 22px;
+                            color: #323232;
+                        }
+
+                            .header-mobile:hover {
+                                color: #077EBE;
+                            }
+
+                        .header-email {
+                            float: right;
+                            font-size: 22px;
+                            color: #323232;
+                        }
+
+                            .header-email span {
+                                font-weight: bold;
+                            }
+
+                            .header-email:hover {
+                                color: #077EBE;
+                            }
+
+                /************************************* Header Navigation Bar ***********************************/
+
+                    .header-nav {
+                        height: 37px;
+                        width: 100%;
+                        background-color: #f2f2f2;
+                        border-radius: 5px;
+                        border: 1px solid #A69B9B;
+                        box-shadow: 0px 3px 4px rgba(0,0,0,0.25);
+                        margin-top: 11px;
+                        box-sizing: border-box;
+                    }        
+
+                        .header-nav-ul {
+                            display: flex;
+                            justify-content: space-around;
+                            padding-top: 11px;
+                        }   
+
+                            .header-nav-ul a, .header-nav-ul a:link {
+                                text-decoration: none;
+                                color: #323232;
+                            }  
+
+                            .header-nav-ul a:hover {
+                                color: #077EBE;
+                            }
+
+                            .current-page {
+                                text-decoration: underline;
+                            }
+
+        /********************************************* Main ********************************************/
+
+        main {
+            box-shadow: 0px 1px 5px rgba(0,0,0,0.25);
+        }
+
+        /*************************************** Contact Section ***************************************/
+
+        .contact {
+            width: 939px;
+            box-sizing: border-box;
+            padding-top: 40px;
+            padding-bottom: 13px;
+            box-shadow: 0px 1px 5px rgba(0,0,0,0.25);
+        }
+
+            .contact h1 {
+                font-size: 26px;
+                text-align: center;
+            }
+
+            .contact p {
+                font-size: 14px;
+                text-align: center;
+            }
+
+            /************************************* Contact (Call Button) ***********************************/
+
+            .contact-heading-2 {
+                margin-top: 48px;
+            }     
+
+            .call-button {
+                width: 289px;
+                height: 79px;
+                margin: 0 auto;
+                position: relative;
+                margin-top: 4px;
+            }
+
+                .call-button img {
+                    position: absolute;
+                    top: 0px;
+                    left: 11px;
+                    z-index: 1;
+                } 
+
+                .call-button-bg {
+                    width: 285px;
+                    height: 56px;
+                    background: linear-gradient(rgba(98, 174, 215, 1), rgba(7, 126, 190, 1));
+                    border: 2px solid rgba(6, 118, 179, 1);
+                    border-radius: 25px;
+                    box-sizing: border-box;
+                    margin: auto;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                }
+
+                    .call-button-bg p {
+                        width: 206px;
+                        height: 30px;
+                        color: #fff;
+                        font-size: 30px;
+                        text-align: center;
+                        text-shadow: -2px -2px 4px rgba(0, 0, 0, 0.25); 
+                        margin-left: 56px;
+                        margin-top: 10px;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                    }
+
+            /************************************* Contact (Email Button) **********************************/
+
+            .contact-heading-3 {
+                margin-top: 40px;
+            }
+
+            .email-button {
+                width: 365px;
+                height: 56px;
+                margin: 0 auto;
+                position: relative;
+                background-color: #077EBE;
+                border-radius: 25px;
+                margin-top: 14px;
+            }
+
+                .email-button img {
+                    display: inline-block;
+                    width: 50px;
+                    height: 50px;
+                    margin-top: auto;
+                    margin-bottom: auto;
+                    margin-left: 20px;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                }
+
+                .email-button p {
+                    width: 263px;
+                    height: 24px;
+                    color: #fff;
+                    font-size: 22px;
+                    margin-top: auto;
+                    margin-bottom: auto;
+                    margin-left: 82px;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                }
+
+            /************************************* Contact (Contact Form) **********************************/
+
+            .contact-heading-4 {
+                margin-top: 54px;
+            }
+
+            .contact-instruction {
+                margin-top: 10px;
+            }
+
+            #home form {
+                width: 661px;
+                max-width: 100%;
+                height: 257px;
+                margin: 0 auto;
+                position: relative;
+                margin-top: 23px;
+            }
+
+                .contact-details {
+                    border-radius: 5px;
+                    font-family: 'clobber-grotesk-medium', 'Trebuchet MS', sans-serif;
+                    font-size: 18px;
+                    color: rgba(0,0,0,0.8);
+                    padding-left: 8px; 
+                    height: 40px;
+                    background-color: #fff;
+                    opacity: 0.8;
+                    border: 1px solid #b4b4b4;
+                    box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.2);
+                    box-sizing: border-box;
+                }
+                
+                    .contact-details::placeholder {
+                        font-family: 'clobber-grotesk-medium', 'Trebuchet MS', sans-serif;
+                        font-size: 20px;
+                        color: rgba(0,0,0,0.25);
+                    }
+
+                .message-and-submit {
+                    width: 661px;
+                    max-width: 90vw;
+                    height: 196px;
+                    display: block;
+                    position: relative;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                
+                    textarea {
+                        font-family: 'clobber-grotesk-medium', 'Trebuchet MS', sans-serif;
+                        font-size: 18px;
+                        color: rgba(0,0,0,0.8);
+                        padding-left: 8px;
+                        padding-top: 5px;
+                        width: 661px;
+                        height: 135px;
+                        resize: none;
+                        display: block;
+                        line-height: 25px;
+                        margin-left: auto;
+                        margin-right: auto;
+                        box-sizing: border-box;
+                        border-radius: 5px;
+                        border: 1px solid #b4b4b4;
+                        opacity: 0.8;
+                        box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.2);
+                    }
+                
+                        textarea::placeholder {
+                            font-family: 'clobber-grotesk-medium', 'Trebuchet MS', sans-serif;
+                            font-size: 20px;
+                            color: rgba(0,0,0,0.26);
+                        }
+                
+                    input[type=submit] {
+                        width: 207px;
+                        height: 42px;
+                        border-radius: 5px;
+                        display: inline-block;
+                        position: absolute;
+                        border: none;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        margin: 0 auto;
+                        font-family: 'clobber-grotesk-medium', 'Trebuchet MS', sans-serif;
+                        font-size: 22px;
+                        color: #fff;
+                        background-color: #077EBE;
+                        box-sizing: border-box;
+                        cursor: pointer;
+                    }
+
+            .contact-error {
+                color: red;
+                font-size: 14px;
+                text-align: center;
+                margin-top: 10px;
+            }  
+
+        /******************************************** Footer *******************************************/
+
+            /**************************************** Footer (Logos) ***************************************/
+
+            .footer-logos {
+                height: 165px;
+                box-shadow: 0px 1px 5px rgba(0,0,0,0.25);
+            }
+            
+                .footer-logos-internal {
+                    width: 600px;
+                    height: 165px;
+                    margin: 0 auto;
+                    position: relative;
+                }
+            
+                    .footer-logos-internal p {
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        text-align: center;
+                        font-size: 14px;
+                        color: #888;
+                        margin-bottom: 21px;
+                    }
+
+                    .logo-qbcc-wrapper {
+                        width: 148px;
+                        height: 165px;
+                        display: inline-block;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                    }
+
+                        .img-logo-wrapper {
+                            height: 130px;
+                            position: relative;    
+                        }
+
+                            .logo-qbcc {
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                bottom: 0;
+                                left: 0;
+                                display: block;
+                                height: 96px;
+                                margin: 0 auto;
+                                top: 50%;
+                                transform: translateY(-50%);
+                            }
+                    
+                    .logo-australia-wrapper {
+                        width: 202px;
+                        height: 165px;
+                        display: inline-block;
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        top: 0;
+                        margin: 0 auto;
+                    }
+
+                        /* See above for .img-logo-wrapper */
+
+                            .logo-australia {
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                bottom: 0;
+                                left: 0;
+                                display: block;
+                                height: 116px;
+                                margin: 0 auto;
+                                top: 50%;
+                                transform: translateY(-50%);
+                            }
+
+                    .logo-award-wrapper {
+                        width: 144px;
+                        height: 165px;
+                        display: inline-block;
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                    }
+
+                        /* See above for .img-logo-wrapper */
+
+                            .logo-award {
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                bottom: 0;
+                                left: 0;
+                                display: block;
+                                height: 114px;
+                                margin: 0 auto;
+                                top: 50%;
+                                transform: translateY(-50%);
+                            }
+                        
+            /********************************** Footer (Links and Copyright) *******************************/
+
+            .footer-links {
+                position: relative;
+                display: block;
+                width: 939px;
+                height: 60px;
+                background: #2d2d2d;
+            }
+            
+                .footer-links ul {
+                    display: flex;
+                    align-items: stretch;
+                    justify-content: space-between;
+                    width: 322px;
+                    height: 12px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    margin-top: 13px;
+                }
+            
+                    .footer-links li {
+                        display: block;
+                        flex: 0 1 auto;
+                        color: #cfcfcf;
+                        font-size: 12px;
+                    }
+            
+                .footer-links a {
+                    text-decoration: none;
+                    color: #cfcfcf;
+                    font-size: 12px;
+                }
+                
+                .footer-links a:hover {
+                    color: #fff;
+                }
+                
+                .copyright {
+                    text-align: center;
+                    color: #cfcfcf;
+                    font-size: 12px;
+                }
+
+
+
+/* Media Query, Less than 560px */
 
 @media only screen and (max-width: 560px) {
 
-    .header {
-        background: url("../images/header-bg-nostripe.png") no-repeat top center;
-        box-shadow: none;
-    }
+/********************************************* Body ********************************************/
 
-    .header-cartoon {
-        display: none;
-    }
-
-    .header-info-wrapper {
-        margin-top: 0px;
-        width: 100%
-    }
-
-    .header-info-wrapper img {
-        max-width: 90vw;
-        height: auto;
-        max-height: 86px;
-        margin-top: 1vw;
-        margin-bottom: 5px;
-    }
-
-    .header-contact-info {
-        /* border-top: 1px dashed blue; */
-        /* border-bottom: 1px dashed blue; */
-        /* background: rgba(0,0,0,0.05); */
-        padding-top: 8px;
-        padding-bottom: 18px;
-        width: 100%;
-    }
-
-    .header-contact-info a, .header-contact-info a:link {
-        /* color: #fff; */
-        text-decoration: none;
-    }
-
-    .header-mobile {
-        display: block;
-        /* margin: 0 auto; */
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 6px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        float: none;
-        background: linear-gradient(rgba(98, 174, 215, 1), rgba(7, 126, 190, 1));
-        border: 2px solid rgba(6, 118, 179, 1);
-        border-radius: 25px;
-        box-sizing: border-box;
-        /* background: #077EBE; */
-        /* border-radius: 20px; */
-        color: #fff;
-        /* border-bottom: 2px solid #fff; */
-        max-width: 95%;
-        width: 320px;
-        /* font-size: em; */
-        /* box-shadow: 0px 2px 7px #000; */
-    }
-
-    .header-mobile:hover {
-        color: #fff;
-    }
-
-    .header-email {
-        display: block;
-        margin: 0 auto;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        background: linear-gradient(rgb(87, 166, 209), rgb(3, 117, 179));
-        border: 2px solid rgba(6, 118, 179, 1);
-        border-radius: 25px;
-        box-sizing: border-box;
-        /* background: #077EBE; */
-        /* border-radius: 20px; */
-        color: #fff;
-        max-width: 95%;
-        width: 320px;
-        float: none;
-    }
-
-    .header-email:hover {
-        color: #fff;
-    }
-
-    .header-nav {
-        height: auto;
-        width: auto;
-        background-color: #fff;
-        /* border-radius: 5px; */
-        border: none;
-        box-shadow: none;
-        margin-top: 0px;
-        box-sizing: border-box;
-    }
-    
-    .header-nav-ul {
-        /* vertical-align: middle; */
-        /* margin-top: auto; */
-        display: block;
-        /* justify-content: space-around; */
-        padding-top: 0px;
-        /* margin-right: 17px; */
-    }
-    
-    .nav-list-item {
-        position: relative;
-        display: block;
-        /* border-top: 1px solid rgba(0,0,0,0.25); */
-        /* border-bottom: 1px solid rgba(0,0,0,0.25); */
-        border-bottom: 2px solid #fff;
-        /* padding: 10px 0px 10px 0px; */
-        background: #077EBE;
-        color: #fff;
-        height: 40px;
-        /* position: absolute; */
-        /* top: 0; */
-        /* right: 0; */
-        /* bottom: 0; */
-        /* left: 0; */
-        /* display: block; */
-        /* width: 23.6%; */
-        /* text-align: center; */
-        /* vertical-align: middle; */
-        /* margin: 0 1em; */
-    }
-    
-    .current-page {
-        background: rgb(77, 166, 214);
-    }
-
-    /* .nav-list-item a, .nav-list-item a:link {
-        vertical-align: middle;
-        color: #fff;
-    } */
-
-    .nav-list-item a:hover {
-        color: #077EBE;
-    }
-
-    .nav-list-item p {
-        /* display: none; */
-        position: absolute;
-        top: 50%;
-        right: 0;
-        left: 0;
-        transform: translateY(-50%);
-        vertical-align: middle;
-        height: 14px;
-    }
-
-    .email-button {
-        width: 295px;
-        /* height: 56px; */
-        /* margin: 0 auto; */
-        /* position: relative; */
-        /* background-color: #077EBE; */
-        /* border-radius: 25px; */
-        /* margin-top: 14px; */
-    }
-
-    .email-button img {
-        display: none;
-        /* width: 30px; */
-        /* height: 30px; */
-        /* margin-left: 10px; */
-    }
-
-    .email-button p {
-        /* width: 263px; */
-        /* height: 24px; */
-        /* color: #fff; */
-        font-size: 22px;
-        margin-left: auto;
-        margin-right: auto;
-        /* margin-left: 30px; */
-        /* position: absolute; */
-        /* top: 0; */
-        /* right: 0; */
-        /* bottom: 0; */
-        /* left: 0; */
-    }
-
-    .contact {
-        /* height: 1000px; */
-    }
-
-    .contact-heading-4, .contact-instruction {
-        max-width: 95%;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-        /* margin-top: 54px; */
+        /******************************************** Header *******************************************/
+        
+        header {
+            background: url("../images/header-bg-nostripe.png") no-repeat top center;
+            box-shadow: none;
         }
+		
+                /************************* Header (Cartoon, Business Title, Contact Info) **********************/
 
-    .contact-details {
-        max-width: 95%;
-        width: 300px;
-    }
+                .header-cartoon {
+                    display: none;
+                }
 
-    #home form {
-        height: 375px;
-    }
+                .header-info-wrapper {
+                    margin-top: 0px;
+                    width: 100%
+                }
 
-    input[type=text] {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 20px;
-        /* float: */
-        /* position: absolute; */
-        /* top: 0; */
-        /* right: 0; */
-        /* bottom: 0; */
-        /* left: 0; */
-    }
-    
-    input[type=email] {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 20px;
-        /* position: absolute; */
-        /* top: 0; */
-        /* right: 0; */
-        /* bottom: 0; */
-        /* left: 0; */
-    }
-    
-    input[type=tel] {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 20px;
-        /* position: absolute; */
-        /* top: 0; */
-        /* right: 0; */
-        /* bottom: 0; */
-        /* left: 0; */
-    }
+                    .header-info-wrapper img {
+                        max-width: 90vw;
+                        height: auto;
+                        max-height: 86px;
+                        margin-top: 1vw;
+                        margin-bottom: 5px;
+                    }
 
-    input[type=submit] {
-        right: 0;
-        left: 0;
-        margin: 0 auto;
-    }
+                    .header-contact-info {
+                        padding-top: 8px;
+                        padding-bottom: 18px;
+                        width: 100%;
+                    }
 
-    .footer-logos {
-        display: none;
-    }
+                        .header-contact-info a, .header-contact-info a:link {
+                            text-decoration: none;
+                        }
 
-    .footer-links ul {
-        display: none;
-    }
+                        .header-mobile {
+                            display: block;
+                            margin-left: auto;
+                            margin-right: auto;
+                            margin-bottom: 6px;
+                            padding-top: 10px;
+                            padding-bottom: 10px;
+                            float: none;
+                            background: linear-gradient(rgba(98, 174, 215, 1), rgba(7, 126, 190, 1));
+                            border: 2px solid rgba(6, 118, 179, 1);
+                            border-radius: 25px;
+                            box-sizing: border-box;
+                            color: #fff;
+                            max-width: 95%;
+                            width: 320px;
+                        }
 
-    .copyright {
-        position: absolute;
-        top: 50%;
-        right: 0;
-        /* bottom: 0; */
-        left:  0;
-        transform: translateY(-50%);
-    }
+                            .header-mobile:hover {
+                                color: #fff;
+                            }
 
-    .copyright-sentence-1 {
-        display: block;
-    }
+                        .header-email {
+                            display: block;
+                            margin: 0 auto;
+                            padding-top: 10px;
+                            padding-bottom: 10px;
+                            background: linear-gradient(rgb(87, 166, 209), rgb(3, 117, 179));
+                            border: 2px solid rgba(6, 118, 179, 1);
+                            border-radius: 25px;
+                            box-sizing: border-box;
+                            color: #fff;
+                            max-width: 95%;
+                            width: 320px;
+                            float: none;
+                        }
 
-    .copyright-pipe {
-        display: none;
-    }
+                            .header-email:hover {
+                                color: #fff;
+                            }
+				
+                /************************************* Header Navigation Bar ***********************************/
+                
+                .header-nav {
+                    height: auto;
+                    width: auto;
+                    background-color: #fff;
+                    border: none;
+                    box-shadow: none;
+                    margin-top: 0px;
+                    box-sizing: border-box;
+                }
 
-    .copyright-sentence-2 {
-        display: block;
-        margin-top: 6px;
-        /* height: 12px; */
-    }
+                    .header-nav-ul {
+                        display: block;
+                        padding-top: 0px;
+                    }
+
+                        .nav-list-item {
+                            position: relative;
+                            display: block;
+                            border-bottom: 2px solid #fff;
+                            background: #077EBE;
+                            color: #fff;
+                            height: 40px;
+                        }
+                        
+                            .nav-list-item a:hover {
+                                color: #077EBE;
+                            }
+
+                            .nav-list-item p {
+                                position: absolute;
+                                top: 50%;
+                                right: 0;
+                                left: 0;
+                                transform: translateY(-50%);
+                                vertical-align: middle;
+                                height: 14px;
+                            }
+
+                        .current-page {
+                            background: rgb(77, 166, 214);
+                        }
+				
+		/********************************************* Main ********************************************/
+		
+		/*************************************** Contact Section ***************************************/
+		
+            /************************************* Contact (Call Button) ***********************************/
+            
+            .email-button {
+                width: 295px;
+            }
+
+                .email-button img {
+                    display: none;
+                }
+
+                .email-button p {
+                    font-size: 22px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+			
+			/************************************* Contact (Email Button) **********************************/
+			
+            /************************************* Contact (Contact Form) **********************************/
+            
+            .contact-heading-4, .contact-instruction {
+                max-width: 95%;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+            }
+ 
+            #home form {
+                height: 375px;
+            }
+
+                .contact-details {
+                    max-width: 95%;
+                    width: 300px;
+                }
+
+                input[type=text] {
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-bottom: 20px;
+                }
+                
+                input[type=email] {
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-bottom: 20px;
+                }
+                
+                input[type=tel] {
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-bottom: 20px;
+                }
+
+                    input[type=submit] {
+                        right: 0;
+                        left: 0;
+                        margin: 0 auto;
+                    }
+			
+		/******************************************** Footer *******************************************/
+		
+            /**************************************** Footer (Logos) ***************************************/
+            
+            .footer-logos {
+                display: none;
+            }
+			
+			/********************************** Footer (Links and Copyright) *******************************/
+
+                .footer-links ul {
+                    display: none;
+                }
+
+                .copyright {
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    left:  0;
+                    transform: translateY(-50%);
+                }
+
+                    .copyright-sentence-1 {
+                        display: block;
+                    }
+
+                    .copyright-pipe {
+                        display: none;
+                    }
+
+                    .copyright-sentence-2 {
+                        display: block;
+                        margin-top: 6px;
+                    }
+
 }
 
-/***************** Media Query, 560px to 700px ***************** */
+
+
+/* Media Query, 560px to 700px */
 
 @media only screen and (min-width: 560px) and (max-width: 700px) {
 
-    .header-cartoon {
-        display: none;
-    }
+/********************************************* Body ********************************************/
 
-    .contact {
-        /* height: 927px; */
-    }
+		/******************************************** Header *******************************************/
+		
+                /************************* Header (Cartoon, Business Title, Contact Info) **********************/
+                
+                .header-cartoon {
+                    display: none;
+                }
+				
+				/************************************* Header Navigation Bar ***********************************/
+				
+		/********************************************* Main ********************************************/
+		
+		/*************************************** Contact Section ***************************************/
+		
+			/************************************* Contact (Call Button) ***********************************/
+			
+			/************************************* Contact (Email Button) **********************************/
+			
+            /************************************* Contact (Contact Form) **********************************/
+            
+            .contact-instruction {
+                max-width: 95%;
+                margin-left: auto;
+                margin-right: auto;
+            }
 
-    .contact-details {
-        width: 300px;
-    }
+            #home form {
+                height: 375px;
+            }
 
-    .contact-instruction {
-        max-width: 95%;
-        margin-left: auto;
-        margin-right: auto;
-        /* text-align: center; */
-    }
+                .contact-details {
+                    width: 300px;
+                }
 
-    #home form {
-        height: 375px;
-    }
+                input[type=text] {
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-bottom: 20px;
+                }
+                
+                input[type=email] {
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-bottom: 20px;
+                }
+                
+                input[type=tel] {
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-bottom: 20px;
+                }
+			
+		/******************************************** Footer *******************************************/
+		
+			/**************************************** Footer (Logos) ***************************************/
+			
+			/********************************** Footer (Links and Copyright) *******************************/
 
-    input[type=text] {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 20px;
-        /* float: */
-        /* position: absolute; */
-        /* top: 0; */
-        /* right: 0; */
-        /* bottom: 0; */
-        /* left: 0; */
-    }
-    
-    input[type=email] {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 20px;
-        /* position: absolute; */
-        /* top: 0; */
-        /* right: 0; */
-        /* bottom: 0; */
-        /* left: 0; */
-    }
-    
-    input[type=tel] {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 20px;
-        /* position: absolute; */
-        /* top: 0; */
-        /* right: 0; */
-        /* bottom: 0; */
-        /* left: 0; */
-    }
+                .copyright {
+                        position: absolute;
+                        margin-top: 35px;
+                        right: 0;
+                        left:  0;
+                    }
 
-    .copyright {
-        position: absolute;
-        margin-top: 35px;
-        /* top 0; */
-        right: 0;
-        /* bottom: 0; */
-        left:  0;
-        /* transform: translateY(-50%); */
-    }   
 }
 
-/***************** Media Query, Larger than 700px ***************** */
+
+
+/* Media Query, Larger than 700px */
 
 @media only screen and (min-width: 700px) {
 
-    body {
-        background: url("../images/bg.png") no-repeat top center;
-        background-size: cover;
-    }
+/********************************************* Body ********************************************/
 
-    .contact {
-        /* height: 808px; */
-    }
-
-    .contact-details {
-        width: 210px;
-    }
-
-    input[type=text] {
-        display: inline-block;
-        /* margin: 0 auto; */
-        position: absolute;
-        top: 0;
-        /* right: 0; */
-        /* bottom: 0; */
-        left: 0;
-    }
-    
-    input[type=email] {
-        display: inline-block;
-        margin: 0 auto;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-    
-    }
-    
-    input[type=tel] {
-        display: inline-block;
-        /* margin: 0 auto; */
-        position: absolute;
-        top: 0;
-        right: 0;
-        /* bottom: 0; */
-        /* left: 0; */
-    }
-
-    .message-and-submit {
-        /* padding-top: 60px; */
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        left: 0;
-
-    }
-
-    .copyright {
-        position: absolute;
-        margin-top: 35px;
-        /* top 0; */
-        right: 0;
-        /* bottom: 0; */
-        left:  0;
-        /* transform: translateY(-50%); */
-    }
+body {
+    background: url("../images/bg.png") no-repeat top center;
+    background-size: cover;
 }
+
+		/******************************************** Header *******************************************/
+		
+				/************************* Header (Cartoon, Business Title, Contact Info) **********************/
+				
+				/************************************* Header Navigation Bar ***********************************/
+				
+		/********************************************* Main ********************************************/
+		
+		/*************************************** Contact Section ***************************************/
+		
+			/************************************* Contact (Call Button) ***********************************/
+			
+			/************************************* Contact (Email Button) **********************************/
+			
+            /************************************* Contact (Contact Form) **********************************/
+            
+                .contact-details {
+                    width: 210px;
+                }
+
+                input[type=text] {
+                    display: inline-block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+                
+                input[type=email] {
+                    display: inline-block;
+                    margin: 0 auto;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                }
+                
+                input[type=tel] {
+                    display: inline-block;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                }
+
+                .message-and-submit {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+            
+                }
+			
+		/******************************************** Footer *******************************************/
+		
+			/**************************************** Footer (Logos) ***************************************/
+			
+            /********************************** Footer (Links and Copyright) *******************************/
+            
+                .copyright {
+                    position: absolute;
+                    margin-top: 35px;
+                    right: 0;
+                    left:  0;
+                }
+    
+} 
