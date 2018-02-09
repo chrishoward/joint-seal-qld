@@ -11,21 +11,9 @@
     font-style: normal;
 }
 
-/* Show div id/class names for clarity purposes if required when developing */
-/* *:before {
-    content: attr(class);
-    position: absolute;
-    color: green;
-} */    
-
-/* *:after {
-    content: attr(class);
-    position: absolute;
-    color: green;
-}  */ 
-
 /********************************************* Body ********************************************/
 
+/* universal */
 body {
     font-family: 'clobber-grotesk-medium', 'Trebuchet MS', sans-serif;
     color: #323232;
@@ -43,6 +31,7 @@ body {
 
         /******************************************** Header *******************************************/
 
+        /* universal */
         header {
             display: block;
             position: relative;
@@ -78,6 +67,7 @@ body {
 
                 /************************* Header (Cartoon, Business Title, Contact Info) **********************/
 
+                /* universal */
                 .header-cartoon {
                     display: inline;
                     max-width: 100%;
@@ -133,6 +123,7 @@ body {
 
                 /************************************* Header Navigation Bar ***********************************/
 
+                /* universal */
                     .header-nav {
                         height: 37px;
                         width: 100%;
@@ -168,10 +159,12 @@ body {
                             }
 
         /********************************************* Main ********************************************/
-
+        
+        /* universal */
         main {
             max-width: 100%;
             box-shadow: 0px 1px 5px rgba(0,0,0,0.25);
+            padding: 25px 0px 40px 30px;
         }
 
             main h1 {
@@ -179,8 +172,159 @@ body {
                 font-size: 26px;
             }
 
+            main h2 {
+                max-width: 100%;
+                font-size: 20px;
+            }
+
+        /* index.html */
+        main {
+            position: relative;
+            padding: 25px 0px 40px 0px;
+        }
+
+            #home-article {
+                font-size: 17px;
+                
+            }
+        
+                #home-article h1, h2 {
+                    margin-left: 30px;
+                }
+
+                #home-article h2 {
+                    margin-top: 15px;
+                    margin-bottom: 34px;
+                    margin-left: 30px;
+                }   
+            
+                #home-article li {
+                    background: url('../images/tick.png') no-repeat top left;
+                    line-height: 35px;
+                    padding-left: 44px;
+                    padding-top: 3px;
+                    /* position: relative; */
+                    /* top: 50%; */
+                    /* height: 40px; */
+                    /* padding-bottom: 10px; */
+                    /* display: table-cell; */
+                    /* vertical-align: middle; */
+                }
+
+                #home-article section {
+                    margin-top: 30px;
+                }
+
+                #image-slider p {
+                    margin-top: -5px;
+                    text-align: center;
+                }
+                
+                    .single-item { 
+                        width: 659px;
+                        max-width: 95%;
+                        margin-left: auto;
+                        margin-right: auto;
+                        margin-top: 30px;
+                    } 
+
+                        .single-item img {
+                            max-width: 100%;
+                            border-radius: 5px;
+                        }
+
+        aside {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 28px 32px;
+            /* bottom: 0; */
+            /* left: 0; */
+
+        }
+
+            aside p {
+                text-align: center;
+                margin-top: 12px;
+                font-size: 17px;
+            }
+
+            #randal-portrait {
+                /* position: relative; */
+                display: block;
+                border-radius: 7px;
+                box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.25);
+                /* position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0; */
+                width: 187px;
+                margin: 0 auto;
+                /* margin-left: auto; */
+                /* margin-right: auto; */
+            }
+
+                .home-call-button {
+                    width: 272px;
+                    max-width: 100%;
+                    height: 74px;
+                    margin: 0 auto;
+                    position: relative;
+                    margin-top: 17px;
+                }
+
+                    .home-call-button img {
+                        max-width: 100%;
+                        position: absolute;
+                        top: -3px;
+                        left: 16px;
+                        z-index: 1;
+                    } 
+
+                    .home-call-button-bg {
+                        width: 272px;
+                        max-width: 100%;
+                        height: 64px;
+                        background: linear-gradient(rgba(98, 174, 215, 1), rgba(7, 126, 190, 1));
+                        border: 2px solid rgba(6, 118, 179, 1);
+                        border-radius: 25px;
+                        box-sizing: border-box;
+                        margin: auto;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                    }
+
+                        .home-call-button-bg p {
+                            width: 206px;
+                            max-width: 100%;
+                            /* height: 30px; */
+                            margin-top: 4px;
+                            /* margin-bottom: 20px; */
+                            color: #fff;
+                            font-size: 26px;
+                            text-align: center;
+                            text-shadow: -2px -2px 4px rgba(0, 0, 0, 0.25); 
+                            margin-left: 48px;
+                            /* margin-top: 10px; */
+                            /* line-height: 5px; */
+                            /* position: absolute;
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+                            left: 0; */
+                        }
+
+                        #home-call-button-slogan {
+                            font-size: 22px;
+                        }
+
         /*************************************** Contact Section ***************************************/
 
+        /* universal */
         .contact {
             width: 939px;
             max-width: 100%;
@@ -191,19 +335,20 @@ body {
         }
 
             .contact h1 {
-                max-width: 100%;
+                max-width: 95%;
                 font-size: 26px;
                 text-align: center;
             }
 
             .contact p {
-                max-width: 100%;
+                max-width: 95%;
                 font-size: 14px;
                 text-align: center;
             }
 
             /************************************* Contact (Call Button) ***********************************/
 
+            /* universal */
             .contact-heading-2 {
                 max-width: 100%;
                 margin-top: 48px;
@@ -228,7 +373,7 @@ body {
 
                 .call-button-bg {
                     width: 285px;
-                    max-width: 100%;
+                    max-width: 95%;
                     height: 56px;
                     background: linear-gradient(rgba(98, 174, 215, 1), rgba(7, 126, 190, 1));
                     border: 2px solid rgba(6, 118, 179, 1);
@@ -261,6 +406,7 @@ body {
 
             /************************************* Contact (Email Button) **********************************/
 
+            /* universal */
             .contact-heading-3 {
                 max-width: 100%;
                 margin-top: 40px;
@@ -268,7 +414,7 @@ body {
 
             .email-button {
                 width: 365px;
-                max-width: 100%;
+                max-width: 95%;
                 height: 56px;
                 margin: 0 auto;
                 position: relative;
@@ -310,6 +456,7 @@ body {
 
             /************************************* Contact (Contact Form) **********************************/
 
+            /* universal */
             .contact-heading-4 {
                 margin-top: 54px;
                 max-width: 100%;
@@ -317,7 +464,7 @@ body {
 
             .contact-instruction {
                 margin-top: 10px;
-                max-width: 100%;
+                max-width: 95%;
             }
 
             #home form {
@@ -421,6 +568,7 @@ body {
 
             /**************************************** Footer (Logos) ***************************************/
 
+            /* universal */
             .footer-logos {
                 height: 165px;
                 max-width: 100%;
@@ -489,8 +637,6 @@ body {
                         margin: 0 auto;
                     }
 
-                        /* See above for .img-logo-wrapper */
-
                             .logo-australia {
                                 max-width: 100%;
                                 position: absolute;
@@ -515,8 +661,6 @@ body {
                         top: 0;
                     }
 
-                        /* See above for .img-logo-wrapper */
-
                             .logo-award {
                                 max-width: 100%;
                                 position: absolute;
@@ -533,6 +677,7 @@ body {
                         
             /********************************** Footer (Links and Copyright) *******************************/
 
+            /* universal */
             .footer-links {
                 position: relative;
                 display: block;
@@ -596,6 +741,7 @@ body {
 
         /******************************************** Header *******************************************/
         
+        /* universal */
         header {
             background: url("../images/header-bg-nostripe.png") no-repeat top center;
             box-shadow: none;
@@ -611,6 +757,7 @@ body {
 
                 /************************* Header (Cartoon, Business Title, Contact Info) **********************/
 
+                /* universal */
                 .header-cartoon {
                     display: none;
                 }
@@ -625,7 +772,7 @@ body {
                         height: auto;
                         max-height: 86px;
                         margin-top: 1vw;
-                        margin-bottom: 5px;
+                        margin-bottom: 3px;
                     }
 
                     .header-contact-info {
@@ -680,6 +827,7 @@ body {
 				
                 /************************************* Header Navigation Bar ***********************************/
                 
+                /* universal */
                 .header-nav {
                     height: auto;
                     width: auto;
@@ -702,20 +850,13 @@ body {
                             background: #077EBE;
                             color: #fff;
                             height: 40px;
+                            text-decoration: none;
                         }
-                        
-                            .nav-list-item a:hover {
-                                color: #077EBE;
-                            }
 
                             .nav-list-item p {
-                                position: absolute;
-                                top: 50%;
-                                right: 0;
-                                left: 0;
-                                transform: translateY(-50%);
-                                vertical-align: middle;
-                                height: 14px;
+                                position: relative;
+                                line-height: 41px;
+                                color: #fff;
                             }
 
                         .current-page {
@@ -723,11 +864,69 @@ body {
                         }
 				
 		/********************************************* Main ********************************************/
-		
+
+        /* index.html */          
+            #home-article h1 {
+                margin-bottom: 25px;
+                margin-left: 0px;
+                text-align: center;
+            }
+
+            #home-article h2 {
+                margin-bottom: 5px;
+                margin-left: 0px;
+                text-align: center;
+            }
+
+            #home-article li {
+                line-height: 24px;
+                padding-bottom: 15px;
+            }
+
+                .single-item { 
+                    max-width: 95%;
+                }
+
+                #text-info-wrapper {
+                    width: 650px;
+                    max-width: 100%;
+                    /* margin-left: 120px; */
+                    margin: 0 auto;
+                    /* text-align: center; */
+                }
+    
+            #home-article section:not(#image-slider) {
+                margin-left: 10px;
+            }
+
+                    #home-article section ul {
+                        margin-top: 23px;
+                        margin-left: 5vw;
+                        /* line-height: 5px; */
+                    }
+    
+                    #home-aside {
+                        position: relative;
+                        margin: 0px;
+                        margin-top: -5px;
+                    }
+    
+                        #randal-portrait, #randal-title {
+                            display: none;
+                        }
+    
+                            .home-call-button {
+                                position: relative;
+                                margin-top: 0px;
+                                margin-bottom: 30px;
+                                /* display: inline-block; */
+                            }
+
 		/*************************************** Contact Section ***************************************/
 		
             /************************************* Contact (Call Button) ***********************************/
             
+            /* universal */
             .email-button {
                 width: 295px;
             }
@@ -746,6 +945,7 @@ body {
 			
             /************************************* Contact (Contact Form) **********************************/
             
+            /* universal */
             .contact-heading-4, .contact-instruction {
                 max-width: 95%;
                 margin-left: auto;
@@ -793,12 +993,14 @@ body {
 		
             /**************************************** Footer (Logos) ***************************************/
             
+            /* universal */
             .footer-logos {
                 display: none;
             }
 			
 			/********************************** Footer (Links and Copyright) *******************************/
 
+            /* universal */
                 .footer-links ul {
                     display: none;
                 }
@@ -838,6 +1040,7 @@ body {
 		
                 /************************* Header (Cartoon, Business Title, Contact Info) **********************/
                 
+                /* universal */
                 .header-cartoon {
                     display: none;
                 }
@@ -845,7 +1048,22 @@ body {
 				/************************************* Header Navigation Bar ***********************************/
 				
 		/********************************************* Main ********************************************/
-		
+        
+        /* index.html */
+            #home-article section:not(#image-slider) {
+                margin-left: 42px;
+            }
+
+            #home-article ul {
+                margin-top: 18px;
+                margin-left: 58px;
+                /* line-height: 50px; */
+            }
+
+                .single-item { 
+                    max-width: 95%;
+                }        
+
 		/*************************************** Contact Section ***************************************/
 		
 			/************************************* Contact (Call Button) ***********************************/
@@ -854,6 +1072,7 @@ body {
 			
             /************************************* Contact (Contact Form) **********************************/
             
+            /* universal */
             .contact-instruction {
                 max-width: 95%;
                 margin-left: auto;
@@ -895,6 +1114,7 @@ body {
 			
 			/********************************** Footer (Links and Copyright) *******************************/
 
+            /* universal */
                 .copyright {
                         position: absolute;
                         margin-top: 35px;
@@ -912,6 +1132,7 @@ body {
 
 /********************************************* Body ********************************************/
 
+/* universal */
 body {
     background: url("../images/bg.png") no-repeat top center;
     background-size: cover;
@@ -923,7 +1144,22 @@ body {
 				
 				/************************************* Header Navigation Bar ***********************************/
 				
-		/********************************************* Main ********************************************/
+        /********************************************* Main ********************************************/
+        
+        /* index.html */
+            #home-article ul {
+                margin-top: 18px;
+                margin-left: 58px;
+                /* line-height: 50px; */
+            }
+
+            #home-article section:not(#image-slider) {
+                margin-left: 42px;
+            }
+
+            #text-info-wrapper span {
+                display: none;
+            }
 		
 		/*************************************** Contact Section ***************************************/
 		
@@ -933,6 +1169,7 @@ body {
 			
             /************************************* Contact (Contact Form) **********************************/
             
+            /* universal */
                 .contact-details {
                     width: 210px;
                 }
@@ -975,6 +1212,7 @@ body {
 			
             /********************************** Footer (Links and Copyright) *******************************/
             
+            /* universal */
                 .copyright {
                     position: absolute;
                     margin-top: 35px;
@@ -983,3 +1221,73 @@ body {
                 }
     
 } 
+
+
+
+@media only screen and (min-width: 560px) and (max-width: 940px) {
+
+/********************************************* Body ********************************************/
+
+		/******************************************** Header *******************************************/
+		
+				/************************* Header (Cartoon, Business Title, Contact Info) **********************/
+				
+				/************************************* Header Navigation Bar ***********************************/
+				
+        /********************************************* Main ********************************************/
+        
+        /* index.html */
+            #text-info-wrapper {
+                width: 650px;
+                max-width: 100%;
+                /* margin-left: 120px; */
+                margin: 0 auto;
+                /* text-align: center; */
+            }
+
+                #text-info-wrapper span {
+                    display: none;
+                }
+
+                #home-article section:not(#image-slider) {
+                    margin-top: -13px;
+                    margin-left: 30px;
+                }
+
+                #image-slider p {
+                    margin: 0 auto;
+                    max-width: 95%;
+                    margin-top: -5px;
+                    margin-bottom: -10px;
+                }
+
+                #home-aside {
+                    position: relative;
+                }
+
+                    #randal-portrait, #randal-title {
+                        display: none;
+                    }
+
+                        .home-call-button {
+                            position: relative;
+                            margin-top: -14px;
+                            margin-bottom: 35px;
+                            /* display: inline-block; */
+                        }
+		
+		/*************************************** Contact Section ***************************************/
+		
+			/************************************* Contact (Call Button) ***********************************/
+			
+			/************************************* Contact (Email Button) **********************************/
+			
+			/************************************* Contact (Contact Form) **********************************/
+			
+		/******************************************** Footer *******************************************/
+		
+			/**************************************** Footer (Logos) ***************************************/
+			
+            /********************************** Footer (Links and Copyright) *******************************/
+            
+}
