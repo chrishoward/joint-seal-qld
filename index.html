@@ -1,3 +1,5 @@
+<!-- Class name format: 'page section'-'container/wrapper/none if just element'-'description of what is in container/wrapper or description of element' -->
+
 <!-- PHP Contact Form Processing -->
 <?php include 'contact.php'; ?>
 
@@ -19,9 +21,6 @@
         <link rel="stylesheet" type="text/css" href="slick/slick.css">
         <!-- Stylesheet, new Slick image slider theme -->
         <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
-
-        <!-- Load CSS before JS scripts -->
-
         <!-- Set character encoding for the document -->
         <meta charset="UTF-8">
         <!-- Instruct Internet Explorer to use its latest rendering engine -->
@@ -29,9 +28,9 @@
         <!-- Viewport for responsive web design -->
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
         <!-- Document title, maximum 55 characters -->
-        <title>Page title less than 55 characters</title>
+        <title>Joint Seal QLD - Professional Waterproofing and Joint Sealing in South East QLD</title>
         <!-- Meta description, maximum 150 characters -->
-        <meta name="description" content="Description of the page less than 150 characters">
+        <meta name="description" content="Joint Seal QLD: Professional waterproofing and joint sealing. See the services we offer, projects we've completed and ways to get in touch!">
         <!-- Standard favicon -->
         <link rel="icon" type="image/x-icon" href="images/favicon.ico">
         <!-- Recommended favicon format, png is recommended format -->
@@ -41,44 +40,35 @@
     </head>
 
     <!-- ********************************************* Body ******************************************** -->
-    <!-- NTS Use unique IDs for each page -->
     <body id="home">
-        <div class="wrapper">
+        <div class="body-container-page">
 
             <!-- ******************************************** Header ******************************************* -->
             <header>
-                <div class="header-content-wrapper">
+                <div class="header-container-all">
 
                     <!-- ************************* Header (Cartoon, Business Title, Contact Info) ********************** -->
-                    <a href="index.html">
-                        <img class="header-cartoon" src="images/header-cartoon.png" alt="caricature">
-                    </a>
-                    <div class="header-info-wrapper">
-                        <a href="index.html">
-                            <img src="images/header-business-name.svg" alt="Joint Seal Queensland">
-                        </a>
-                        <div class="header-contact-info">
-                            <a href="tel:0422508313">
-                                <p class="header-mobile">0422 508 313</p>
-                            </a>
-                            <a href="mailto:info@jointsealqld.com.au?Subject=Customer%20Enquiry" target="_blank" rel="noopener">
-                                <p class="header-email">info<span>@</span>jointsealqld.com.au</p>
-                            </a>
+                    <a href="index.html"><img class="header-cartoon" src="images/header-cartoon.png" alt="caricature"></a>
+                    <div class="header-container-title-contact-nav">
+                        <a href="index.html"><img src="images/header-business-name.svg" alt="Joint Seal Queensland"></a>
+                        <div class="header-container-contact-info">
+                            <a href="tel:0422508313"><p class="header-mobile-number">0422 508 313</p></a>
+                            <a href="mailto:info@jointsealqld.com.au?Subject=Customer%20Enquiry" target="_blank" rel="noopener"><p class="header-email">info<span>@</span>jointsealqld.com.au</p></a>
                         </div>
 
                         <!-- ************************************* Header Navigation Bar *********************************** -->
-                        <nav class="header-nav">
-                            <ul class="header-nav-ul">
-                                <li class="nav-list-item current-page">
+                        <nav>
+                            <ul>
+                                <li class="nav-current-page">
                                     <a href="index.html"><p>HOME</p></a>
                                 </li>
-                                <li class="nav-list-item">
+                                <li>
                                     <a href="services.html"><p>SERVICES</p></a>
                                 </li>
-                                <li class="nav-list-item">
+                                <li>
                                     <a href="projects.html"><p>PROJECTS</p></a>
                                 </li>
-                                <li class="nav-list-item">
+                                <li>
                                     <a href="contact.html"><p>CONTACT</p></a>
                                 </li>
                             </ul>
@@ -89,8 +79,8 @@
 
             <!-- ********************************************* Main ******************************************** -->
             <main>
-                <article id="home-article">
-                    <div id="text-info-wrapper">
+                <article>
+                    <div class="main-container-content-above-slider">
                         <h1>Professional Waterproofing and Joint Sealing</h1>
                         <h2>Servicing Brisbane and South East QLD since 2004</h2>
 
@@ -105,19 +95,19 @@
                             </ul>
                         </section>
 
-                        <aside id="home-aside">
-                                <img id="randal-portrait" src="images/randal.png" alt="manager-portrait">
-                                <p id="randal-title">Randal McDonald, Manager</p>
-                                <a href="tel:0422508313">
-                                    <div class="home-call-button">
-                                        <img src="images/phone.png" alt="phone-icon">
-                                        <div class="home-call-button-bg">
-                                            <p>0422 508 313</p>
-                                            <p id="home-call-button-slogan">&nbsp;&nbsp;&nbsp;Give us a call</p>
-                                        </div>
+                        <aside>
+                            <img class="main-randal-portrait" src="images/randal.png" alt="manager-portrait">
+                            <p class="main-randal-title">Randal McDonald, Manager</p>
+                            <a href="tel:0422508313">
+                                <div class="main-container-call-button-all">
+                                    <img src="images/phone.png" alt="phone-icon">
+                                    <div class="main-container-call-button">
+                                        <p class="main-call-button-number">0422 508 313</p>
+                                        <p class="main-call-button-cta">&nbsp;&nbsp;&nbsp;Give us a call</p>
                                     </div>
-                                </a>
-                            </aside>
+                                </div>
+                            </a>
+                        </aside>
 
                         <section>
                             <p>We help out clients in all areas of the construction industry;</p>
@@ -130,7 +120,7 @@
                         </section>
                     </div>
 
-                    <section id="image-slider">
+                    <section class="main-container-image-slider">
                         <p>We are proud of our ability to provide a reliable, cost-effective, no-nonsense service to each and every client.</p>
                         <div class="single-item">
                             <div><img src="images/van.png" alt=""></div>
@@ -140,8 +130,6 @@
                         </div>
                     </section>
                 </article>
-
-                
             </main>
 
             <!-- *************************************** Contact Section *************************************** -->
@@ -151,9 +139,9 @@
                 <!-- ************************************* Contact (Call Button) *********************************** -->
                 <h1 class="contact-heading-2">Give us a call.</h1>
                 <a href="tel:0422508313">
-                    <div class="call-button">
+                    <div class="contact-container-call-button">
                         <img src="images/phone.png" alt="phone-icon">
-                        <div class="call-button-bg">
+                        <div class="contact-wrapper-call-button-text">
                             <p>0422 508 313</p>
                         </div>
                     </div>
@@ -162,7 +150,7 @@
                 <!-- ************************************* Contact (Email Button) ********************************** -->
                 <h1 class="contact-heading-3">Send us an email.</h1>
                 <a href="mailto:info@jointsealqld.com.au?Subject=Customer%20Enquiry" target="_blank" rel="noopener">
-                    <div class="email-button">
+                    <div class="contact-container-email-button">
                         <img src="images/email.png" alt="email-icon">
                         <p>info@jointsealqld.com.au</p>
                     </div>
@@ -171,17 +159,17 @@
                 <!-- ************************************* Contact (Contact Form) ********************************** -->
                 <h1 class="contact-heading-4">Send us an email via our website.</h1>
                 <p class="contact-instruction">Please provide your preferred contact details (email address or phone number or both).</p>
-                <form id="contact-form" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>#contact-form" method="POST">                              <!-- When form is submitted reload current page and scroll down to form -->
-                    <input class="contact-details" type="text" name="name" aria-label="Enter name" placeholder="Name" value="<?php echo $name;?>"> 
-                    <input class="contact-details" type="email" name="email" aria-label="Enter email" placeholder="Email" value="<?php echo $email;?>">         <!-- Use of php echo $variable is to ensure the user input stays in the form after the submit button is clicked -->
-                    <input class="contact-details" type="tel" name="tel" aria-label="Enter telephone number" placeholder="Phone" value="<?php echo $tel;?>">
-                    <div class="message-and-submit">
+                <form class="contact-form" id="contact-form" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>#contact-form" method="POST">                              <!-- When form is submitted reload current page and scroll down to form -->
+                    <input type="text" name="name" aria-label="Enter name" placeholder="Name" value="<?php echo $name;?>"> 
+                    <input type="email" name="email" aria-label="Enter email" placeholder="Email" value="<?php echo $email;?>">         <!-- Use of php echo $variable is to ensure the user input stays in the form after the submit button is clicked -->
+                    <input type="tel" name="tel" aria-label="Enter telephone number" placeholder="Phone" value="<?php echo $tel;?>">
+                    <div class="contact-container-textarea-and-submit">
                         <textarea name="message" aria-label="Enter message" placeholder="Message"><?php echo $message;?></textarea>
                         <input type="submit" name="submit" value="Send Message">
                     </div>
                 </form>
                 <!-- Display of status/error messages based on user input in contact form -->
-                <div class="contact-error">      
+                <div class="contact-container-error-messages">      
                     <?php echo $nameError; ?>
                     <?php echo $emailTelError; ?>
                     <?php echo $emailError; ?>
@@ -196,23 +184,23 @@
             <footer>
                 
                 <!-- **************************************** Footer (Logos) *************************************** -->
-                <section class="footer-logos">
-                    <div class="footer-logos-internal">
-                        <div class="logo-qbcc-wrapper">
-                            <div class="img-logo-wrapper">
-                                <img class="logo-qbcc" src="images/logo-qbcc.png" alt="QBCC logo">
+                <section class="footer-container-logos-all">
+                    <div class="footer-container-logos">
+                        <div class="footer-container-qbcc-logo-license">
+                            <div class="footer-wrapper-logos">
+                                <img class="footer-logo-qbcc" src="images/logo-qbcc.png" alt="QBCC logo">
                             </div>
                             <p>License No. 15012136</p>
                         </div>
-                        <div class="logo-australia-wrapper">
-                            <div class="img-logo-wrapper">
-                                <img class="logo-australia" src="images/logo-australia.png" alt="australia logo">
+                        <div class="footer-container-australia-logo-ownership">
+                            <div class="footer-wrapper-logos">
+                                <img class="footer-logo-australia" src="images/logo-australia.png" alt="australia logo">
                             </div>
                             <p>Australian Owned &amp; Operated</p>
                         </div>
-                        <div class="logo-award-wrapper">
-                            <div class="img-logo-wrapper">
-                                <img class="logo-award" src="images/logo-award.png" alt="years of operation logo">
+                        <div class="footer-container-award-and-abn">
+                            <div class="footer-wrapper-logos">
+                                <img class="footer-logo-award" src="images/logo-award.png" alt="years of operation logo">
                             </div>
                             <p>ABN: 58 671 341 758</p>
                         </div>
@@ -220,7 +208,7 @@
                 </section>
 
                 <!-- ********************************** Footer (Links and Copyright) ******************************* -->
-                <section class="footer-links">
+                <section class="footer-container-links-and-copyright">
                     <ul>
                         <li>
                             <a href="index.html">HOME</a>
@@ -235,16 +223,16 @@
                             <a href="contact.html">CONTACT</a>
                         </li>
                     </ul>
-                    <p class="copyright">
-                        <span class="copyright-sentence-1">&copy; Copyright 2018 Joint Seal QLD</span>
-                        <span class="copyright-pipe">&nbsp; &nbsp; | &nbsp; &nbsp;</span>
-                        <span class="copyright-sentence-2">Website developed by
+                    <p class="footer-container-copyright-and-developer">
+                        <span class="footer-copyright-sentence">&copy; Copyright 2018 Joint Seal QLD</span>
+                        <span class="footer-copyright-pipe">&nbsp; &nbsp; | &nbsp; &nbsp;</span>
+                        <span class="footer-developer-sentence">Website developed by
                             <a href="https://www.linkedin.com/in/christopher-howard-au/">Chris Howard</a>
                         </span>
                     </p>
                 </section>
             </footer>
-        </div> <!-- Close wrapper div -->
+        </div> <!-- Close body-container-page div -->
 
         <!-- Scripts for Slick image slider -->
         <!-- jQuery v3.3.1 from Google CDN -->
