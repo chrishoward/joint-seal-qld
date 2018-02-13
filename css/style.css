@@ -687,7 +687,15 @@ main h2 {
 
 /* services.html, all viewports */
 #services main article {
-    padding: 37px 30px 72px 38px;
+    padding: 30px 30px 72px 38px;
+}
+
+#services article h2 {
+    line-height: 26px;
+}
+
+#services .main-service-contact {
+    line-height: 29px;
 }
 
 #services article ul {
@@ -697,14 +705,17 @@ main h2 {
     margin-right: auto;
     margin-bottom: 18px;
     width: 745px;
-    max-width: 95%;
+    max-width: 100%;
 }
 
 #services article ul li {
     display: block;
+    max-width: 100%;
     height: 153px;
     line-height: 153px;
     font-family: 'Arial', sans-serif; /* clobber font causing issues with vertical centering of image in list item, likely due to off-center glyphs in font */
+    white-space: nowrap;
+    /* overflow: hidden; */
     /* border: 1px solid red; */
 }
 
@@ -718,16 +729,18 @@ main h2 {
 #services .main-container-service-heading-info {
     display: inline-block;
     vertical-align: top;
-    margin-top: 31px;
+    margin-top: 23px;
     margin-left: 8px;
     width: 545px;
+    max-width: calc(100% - 177px);
+    white-space: normal;
     /* border: 1px solid red; */
 }
 
 #services article li h2 {
     /* padding-top: 13px; */
     font-family: 'clobber-grotesk-medium', 'Trebuchet MS', sans-serif;
-    line-height: 20px;
+    /* line-height: 26px; */
     padding-bottom: 9px;
 }
 
@@ -738,11 +751,9 @@ main h2 {
     line-height: 19px;
 }
 
-
-
 #services .main-service-contact {
     font-size: 20px;
-    line-height: 29px;
+    /* line-height: 29px; */
     text-align: center;
     margin-bottom: 51px;
 }
@@ -751,8 +762,6 @@ main h2 {
     color: #077EBE;
     /* text-decoration: none; */
 }
-
-
 
 #services section:nth-child(2) h2 {
     margin-top: 14px; 
@@ -767,7 +776,7 @@ main h2 {
     margin-left: auto;
     margin-right: auto;
     border: 2px solid #D5D5D552;
-    border-radius: 5px;
+    border-radius: 6px;
 }
 
 
@@ -1033,6 +1042,81 @@ main h2 {
     #home .single-item { 
         max-width: 95%;
     }
+
+    /* services.html, viewport less than 560px */
+    #services main article {
+        padding: 24px 10px 72px 10px;
+    }
+
+    #services article h1 {
+        text-align: center;
+    }
+
+    #services article ul {
+        margin-top: 25px;
+        margin-bottom: 50px;
+    }
+    
+    #services article ul li {
+        /* display: block; */
+        /* max-width: 100%; */
+        height: auto;
+        /* padding-top: 35px; */
+        /* line-height: 1px; */
+        white-space: normal;
+        /* overflow: hidden; */
+        /* border: 1px solid red; */
+    }
+
+    #services article ul li:not(:first-child) {
+        padding-top: 38px;
+    }
+
+    #services article ul li img {
+        display: block;
+        width: 179px;
+        /* margin-top: 20px; */
+        margin-left: auto;
+        margin-right: auto;
+        /* vertical-align: middle; */
+        /* margin-right: 16px; */
+        border-radius: 10px;
+    }
+
+    #services article ul li h2 {
+        text-align: center;
+    }
+
+    #services article ul li p {
+        /* text-align: justify; */
+        margin-left: 7px;
+        line-height: 20px;
+        /* vertical-align: normal; */
+        /* margin-bottom: 200px; */
+        /* text-align: center; */
+    }
+    
+    #services .main-container-service-heading-info {
+        display: block;
+        /* vertical-align: top; */
+        margin-top: 15px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 545px;
+        max-width: 100%;
+        white-space: normal;
+        /* border: 1px solid red; */
+    }
+
+    /* #services .main-container-service-area h2 { */
+        /* line-height: 25px; */
+    /* } */
+
+    #services .main-service-contact {
+        line-height: 25px;
+        margin-bottom: 45px;
+        /* color: #077EBE; */
+    }
 }
 
 
@@ -1099,7 +1183,71 @@ main h2 {
 
     #home .single-item { 
         max-width: 95%;
-    }        
+    }
+
+    /* services.html, viewport 560px to 700px */
+    #services main article {
+        padding: 26px 30px 72px 30px;
+    }
+    
+    #services article h1 {
+        text-align: center;
+    }
+    
+    #services article ul {
+        margin-top: 25px;
+        margin-bottom: 50px;
+    }
+    
+    #services article ul li {
+        /* display: block; */
+        /* max-width: 100%; */
+        height: auto;
+        /* padding-top: 35px; */
+        /* line-height: 1px; */
+        white-space: normal;
+        /* overflow: hidden; */
+        /* border: 1px solid red; */
+    }
+
+    #services article ul li:not(:first-child) {
+        padding-top: 38px;
+    }
+
+    #services article ul li img {
+        display: block;
+        width: 179px;
+        /* margin-top: 20px; */
+        margin-left: auto;
+        margin-right: auto;
+        /* vertical-align: middle; */
+        /* margin-right: 16px; */
+        border-radius: 10px;
+    }
+
+    #services article ul li h2 {
+        text-align: center;
+    }
+
+    #services article ul li p {
+        margin-left: 15px;
+        line-height: 20px;
+        /* vertical-align: normal; */
+        /* margin-bottom: 200px; */
+        /* text-align: center; */
+    }
+    
+    #services .main-container-service-heading-info {
+        display: block;
+        /* vertical-align: top; */
+        margin-top: 15px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 545px;
+        max-width: 100%;
+        white-space: normal;
+        /* border: 1px solid red; */
+    }
 }
 
 
