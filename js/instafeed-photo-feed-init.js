@@ -1,13 +1,26 @@
-var userFeed = new Instafeed({
-    get: 'user',
-    userId: '7101810308',
-    accessToken: '7101810308.fefcdfa.01da190d9af54e5599a86dce9d8f9b25'
-});
-userFeed.run();
+// Load more button
+var loadButton = document.getElementById('load-more');
+    var feed = new Instafeed({
+        get: 'user',
+        userId: '7101810308',
+        accessToken: '7101810308.fefcdfa.01da190d9af54e5599a86dce9d8f9b25',
+        template: '<div class="main-container-instafeed-photo-outer"><div class="main-container-instafeed-photo-inner"><a href="{{link}}"><div class="main-instafeed-photo" style="background-image: url(\'{{image}}\');"></div></a><p>{{caption}}</p></div></div>',
+        limit: 6,
+        resolution: 'standard_resolution',
+        sortBy: 'most-recent',
+        // every time we load more, run this function
+        after: function() {
+            // disable button if no more results to load
+            if (!this.hasNext()) {
+                loadButton.setAttribute('disabled', 'disabled');
+            }
+        },
+    });
 
-// var feed = new Instafeed({
-//     get: 'tagged',
-//     tagName: 'awesome',
-//     clientId: '782166caa35740aab1a274ac06f60f86'
-// });
-// feed.run();
+    // bind the load more button
+    loadButton.addEventListener('click', function() {
+        feed.next();
+    });
+
+    // run our feed!
+    feed.run();
