@@ -44,7 +44,7 @@ header {
     height: 235px;
     margin: 0 auto;
     text-align: center;
-    background: url("../images/header-bg.png") no-repeat top center;
+    /* background: url("../images/header-bg.png") no-repeat top center; */
     box-shadow: 0px 2px 4px rgba(0,0,0,0.25);
 }
 
@@ -244,7 +244,7 @@ main h2 {
     font-size: 30px;
     text-align: center;
     text-shadow: -2px -2px 4px rgba(0, 0, 0, 0.25); 
-    margin-left: 56px;
+    margin-left: 45px;
     margin-top: 10px;
     position: absolute;
     top: 0;
@@ -596,8 +596,20 @@ main h2 {
     padding-top: 3px;
 }
 
-#home article section {
+/* index.html, all viewports and device pixel ratio of 2 or larger */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+    #home article li {
+        background: url('../images/tick-2x.png') no-repeat top left;
+        background-size: 33px 32px;
+    }
+}
+
+#home article section:not(.main-container-image-slider) {
     margin-top: 30px;
+}
+
+#home .main-container-image-slider {
+    margin-top: 27px;
 }
 
 #home aside {
@@ -671,8 +683,10 @@ main h2 {
 }
 
 #home .main-container-image-slider p {
-    margin-top: -5px;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 95%;
 }
 
 #home .single-item { 
@@ -869,9 +883,17 @@ main h2 {
 
     /* All pages, viewport less than 560px */
     header {
-        background: url("../images/header-bg-nostripe.png") no-repeat top center;
+        background: url("../images/header-bg-mobile.png") no-repeat top center;
         box-shadow: none;
         height: auto;
+    }
+
+    /* All pages, viewport less than 560px and device pixel ratio of 2 or larger */
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+        header {
+            background: url("../images/header-bg-mobile-2x.png") no-repeat top center;
+            background-size: 560px 235px;
+        }
     }
 
     .header-container-all {
@@ -1076,19 +1098,28 @@ main h2 {
     /* index.html, viewport less than 560px */
     #home article h1 {
         margin-bottom: 25px;
-        margin-left: 0px;
+        margin-left: auto;
+        margin-right: auto;
         text-align: center;
+        max-width: 95%;
     }
 
     #home article h2 {
         margin-bottom: 5px;
-        margin-left: 0px;
+        margin-left: auto;
+        margin-right: auto;
         text-align: center;
+        max-width: 95%;
+    }
+
+    #home article section:not(.main-container-image-slider) p {
+        max-width: calc(94vw - 10px);
     }
 
     #home article li {
         line-height: 24px;
         padding-bottom: 15px;
+        max-width: calc(93vw - 77px);
     }
 
     #home article section:not(.main-container-image-slider) {
@@ -1120,6 +1151,7 @@ main h2 {
         position: relative;
         margin-top: 0px;
         margin-bottom: 30px;
+        max-width: 95%;
     }
 
     #home .single-item { 
@@ -1131,9 +1163,13 @@ main h2 {
         padding: 24px 10px 72px 10px;
     }
 
-    #services article h1 {
+    #services article h1, #services article h2 {
         text-align: center;
     }
+
+    #services .main-container-service-area p {
+        text-align: center;
+    }   
 
     #services article ul {
         margin-top: 25px;
@@ -1231,6 +1267,18 @@ main h2 {
 @media only screen and (min-width: 560px) and (max-width: 700px) {
 
     /* All pages, viewport 560px to 700px */
+    header {
+        background: url("../images/header-bg.png") no-repeat top center;
+    }
+
+    /* All pages, viewport 560px to 700px and device pixel ratio of 2 or larger */
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+        header {
+            background: url("../images/header-bg-2x.png") no-repeat top center;
+            background-size: 940px 235px;
+        }
+    }    
+
     .header-cartoon {
         display: none;
     }
@@ -1278,6 +1326,10 @@ main h2 {
     }
 
     /* index.html, viewport 560px to 700px */	
+    #home article h1 {
+        max-width: calc(97% - 30px);
+    }
+
     #home article section:not(.main-container-image-slider) {
         margin-left: 42px;
     }
@@ -1389,6 +1441,18 @@ main h2 {
         background-size: cover;
     }
 
+    header {
+        background: url("../images/header-bg.png") no-repeat top center;
+    }
+
+    /* All pages, viewport larger than 700px and device pixel ratio of 2 or larger */
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+        header {
+            background: url("../images/header-bg-2x.png") no-repeat top center;
+            background-size: 940px 235px;
+        }
+    }
+      
     .contact-form input {
         width: 210px;
     }
@@ -1448,13 +1512,28 @@ main h2 {
 
 
 
+/* All pages, viewport larger than 700px and device pixel ratio of 2 or larger */
+/* @media 
+(-webkit-min-device-pixel-ratio: 4), 
+(min-resolution: 192dpi) {
+    header {
+      background: url("../images/header-bg-2x.png") no-repeat top center;
+    }
+} */
+
+
+
 /* Media query, viewport between 560px and 940px */
 @media only screen and (min-width: 560px) and (max-width: 940px) {
 
     /* index.html, viewport between 560px and 940px */
     #home article section:not(.main-container-image-slider) {
-        margin-top: -13px;
+        /* margin-top: 0px; */
         margin-left: 30px;
+    }
+
+    #home article section:not(.main-container-image-slider) p {
+        max-width: calc(95vw - 30px);
     }
     
     #home .main-container-content-above-slider {
@@ -1469,6 +1548,8 @@ main h2 {
 
     #home aside {
         position: relative;
+        padding: 0px;
+        margin: 0px;
     }
 
     #home .main-randal-portrait, .main-randal-title {
@@ -1477,14 +1558,8 @@ main h2 {
 
     #home .main-container-call-button-all {
         position: relative;
-        margin-top: -14px;
-        margin-bottom: 35px;
-    }
-
-    #home .main-container-image-slider p {
-        margin: 0 auto;
-        max-width: 95%;
-        margin-top: -5px;
-        margin-bottom: -10px;
+        margin-top: 20px;
+        margin-bottom: 14px;
+        /* margin-bottom: 35px; */
     }
 }
