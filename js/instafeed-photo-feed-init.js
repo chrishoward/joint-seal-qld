@@ -5,7 +5,7 @@ var loadButton = document.getElementById('load-more');
         userId: '7101810308',
         accessToken: '7101810308.fefcdfa.01da190d9af54e5599a86dce9d8f9b25',
         template: '<div class="main-container-instafeed-photo-outer"><div class="main-container-instafeed-photo-inner"><a href="{{link}}"><div class="main-instafeed-photo" style="background-image: url(\'{{image}}\');"></div></a><p>{{caption}}</p></div></div>',
-        limit: 6,
+        limit: 4,
         resolution: 'standard_resolution',
         sortBy: 'most-recent',
         // every time we load more, run this function
