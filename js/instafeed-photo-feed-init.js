@@ -1,5 +1,5 @@
 // Load more button
-var loadButton = document.getElementById('load-more');
+var loadButton = document.getElementById('js-load-more');
     var feed = new Instafeed({
         get: 'user',
         userId: '7101810308',

@@ -1,6 +1,6 @@
 // This function draws a polygon over the Google map on the services.html page.
 function initMap() {
-  var map = new google.maps.Map(document.getElementById('map'), {
+  var map = new google.maps.Map(document.getElementById('js-map'), {
     zoom: 8,
     center: {lat: -27.397139, lng: 152.783694},
     mapTypeId: 'roadmap'

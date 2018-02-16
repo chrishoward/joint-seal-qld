@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $('.single-item').slick({
+    $('#js-single-item').slick({
         autoplay: true,
         autoplaySpeed: 4000,
         // dots: true
