@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function() {
     $('#js-single-item').slick({
         autoplay: true,
         autoplaySpeed: 4000,
