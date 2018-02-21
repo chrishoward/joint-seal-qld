@@ -1,42 +1,45 @@
+<!doctype html> <!-- Doctype Declaration -->
+
 <!-- Class name format: 'page section'-'container/wrapper/none if just element'-'description of what is in container/wrapper or description of element' -->
 
 <!-- PHP Contact Form Processing -->
 <?php include 'contact.php'; ?>
-
-<!-- Doctype Declaration -->
-<!doctype html>
 
 <!-- Html -->
 <html lang="en" dir="ltr">
     
     <!-- ********************************************* Head ******************************************** -->
     <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114512451-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-114512451-1');
+        </script>
+        <!-- Set character encoding for the document -->
+        <meta charset="UTF-8" />
         <!-- Stylesheet, reset -->
-        <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <link rel="stylesheet" type="text/css" href="css/reset.css" />
         <!-- Stylesheet, main -->
-        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
         <!-- Stylesheet, critical -->
         <!-- <link rel="stylesheet" type="text/css" href="temp-working-files/critical.css"> -->
-        
-        <!-- Load CSS before JS scripts -->
-        <!-- Script for Instafeed photo feed from Instagram -->
-        <!-- <script type="text/javascript" src="js/instafeed.min.js"></script> -->
-        <!-- Set character encoding for the document -->
-        <meta charset="UTF-8">
         <!-- Instruct Internet Explorer to use its latest rendering engine -->
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
         <!-- Viewport for responsive web design -->
-        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <!-- Document title, maximum 55 characters -->
         <title>Joint Seal QLD: Projects We Have Completed</title>
         <!-- Meta description, maximum 150 characters -->
-        <meta name="description" content="Joint Seal QLD: Professional waterproofing and joint sealing. See the projects we've completed and the high quality of our work!">
+        <meta name="description" content="Joint Seal QLD: Professional waterproofing and joint sealing. See the projects we've completed and the high quality of our work!" />
         <!-- Standard favicon -->
-        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
         <!-- Recommended favicon format, png is recommended format -->
-        <link rel="icon" type="image/png" href="images/favicon.png">
+        <link rel="icon" type="image/png" href="images/favicon.png" />
         <!-- Prevent Mobile Safari from detecting phone numbers and converting to links with link styling -->
-        <meta name="format-detection" content="telephone=no">
+        <meta name="format-detection" content="telephone=no" />
     </head>
 
     <!-- ********************************************* Body ******************************************** -->
@@ -49,9 +52,9 @@
                 <div class="header-container-all">
 
                     <!-- ************************* Header (Cartoon, Business Title, Contact Info) ********************** -->
-                    <a href="index.html"><img class="header-cartoon" src="images/header-cartoon.png" srcset="images/header-cartoon-2x.png 2x" alt="caricature"></a>
+                    <a href="index.html"><img class="header-cartoon" src="images/header-cartoon.png" srcset="images/header-cartoon-2x.png 2x" alt="caricature" /></a>
                     <div class="header-container-title-contact-nav">
-                        <a href="index.html"><img src="images/header-business-name.svg" alt="Joint Seal Queensland"></a>
+                        <a href="index.html"><img src="images/header-business-name.svg" alt="Joint Seal Queensland" /></a>
                         <div class="header-container-contact-info">
                             <a href="tel:0422508313"><p class="header-mobile-number">0422 508 313</p></a>
                             <a href="mailto:info@jointsealqld.com.au?Subject=Customer%20Enquiry" target="_blank" rel="noopener"><p class="header-email">info<span>@</span>jointsealqld.com.au</p></a>
@@ -95,7 +98,7 @@
                 <h1 class="contact-heading-2">Give us a call.</h1>
                 <a href="tel:0422508313">
                     <div class="contact-container-call-button">
-                        <img src="images/phone.png" srcset="images/phone-2x.png 2x" alt="phone-icon">
+                        <img src="images/phone.png" srcset="images/phone-2x.png 2x" alt="phone-icon" />
                         <div class="contact-wrapper-call-button-text">
                             <p>0422 508 313</p>
                         </div>
@@ -106,7 +109,7 @@
                 <h1 class="contact-heading-3">Send us an email.</h1>
                 <a href="mailto:info@jointsealqld.com.au?Subject=Customer%20Enquiry" target="_blank" rel="noopener">
                     <div class="contact-container-email-button">
-                        <img src="images/email.png" srcset="images/email-2x.png 2x" alt="email-icon">
+                        <img src="images/email.png" srcset="images/email-2x.png 2x" alt="email-icon" />
                         <p>info@jointsealqld.com.au</p>
                     </div>
                 </a>
@@ -115,12 +118,12 @@
                 <h1 class="contact-heading-4">Send us an email via our website.</h1>
                 <p class="contact-instruction">Please provide your preferred contact details (email address or phone number or both).</p>
                 <form class="contact-form" id="contact-form" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>#contact-form" method="POST">                              <!-- When form is submitted reload current page and scroll down to form -->
-                    <input type="text" name="name" aria-label="Enter name" placeholder="Name" value="<?php echo $name;?>"> 
-                    <input type="email" name="email" aria-label="Enter email" placeholder="Email" value="<?php echo $email;?>">         <!-- Use of php echo $variable is to ensure the user input stays in the form after the submit button is clicked -->
-                    <input type="tel" name="tel" aria-label="Enter telephone number" placeholder="Phone" value="<?php echo $tel;?>">
+                    <input type="text" name="name" aria-label="Enter name" placeholder="Name" value="<?php echo $name;?>" /> 
+                    <input type="email" name="email" aria-label="Enter email" placeholder="Email" value="<?php echo $email;?>" />         <!-- Use of php echo $variable is to ensure the user input stays in the form after the submit button is clicked -->
+                    <input type="tel" name="tel" aria-label="Enter telephone number" placeholder="Phone" value="<?php echo $tel;?>" />
                     <div class="contact-container-textarea-and-submit">
                         <textarea name="message" aria-label="Enter message" placeholder="Message"><?php echo $message;?></textarea>
-                        <input type="submit" name="submit" value="Send Message">
+                        <input type="submit" name="submit" value="Send Message" />
                     </div>
                 </form>
                 <!-- Display of status/error messages based on user input in contact form -->
@@ -143,19 +146,19 @@
                     <div class="footer-container-logos">
                         <div class="footer-container-qbcc-logo-license">
                             <div class="footer-wrapper-logos">
-                                <img class="footer-logo-qbcc" src="images/logo-qbcc.png" srcset="images/logo-qbcc-2x.png 2x" alt="QBCC logo">
+                                <img class="footer-logo-qbcc" src="images/logo-qbcc.png" srcset="images/logo-qbcc-2x.png 2x" alt="QBCC logo" />
                             </div>
                             <p>License No. 15012136</p>
                         </div>
                         <div class="footer-container-australia-logo-ownership">
                             <div class="footer-wrapper-logos">
-                                <img class="footer-logo-australia" src="images/logo-australia.png" srcset="images/logo-australia-2x.png 2x" alt="australia logo">
+                                <img class="footer-logo-australia" src="images/logo-australia.png" srcset="images/logo-australia-2x.png 2x" alt="australia logo" />
                             </div>
                             <p>Australian Owned &amp; Operated</p>
                         </div>
                         <div class="footer-container-award-and-abn">
                             <div class="footer-wrapper-logos">
-                                <img class="footer-logo-award" src="images/logo-award.png" srcset="images/logo-award-2x.png 2x" alt="years of operation logo">
+                                <img class="footer-logo-award" src="images/logo-award.png" srcset="images/logo-award-2x.png 2x" alt="years of operation logo" />
                             </div>
                             <p>ABN: 58 671 341 758</p>
                         </div>
@@ -190,9 +193,9 @@
         </div> <!-- Close body-container-page div -->
 
         <!-- Script for Instafeed photo feed from Instagram -->
-        <script type="text/javascript" src="js/instafeed.min.js"></script>
+        <script src="js/instafeed.min.js"></script>
         <!-- Initialization script for Instafeed photo feed -->
-        <script type="text/javascript" src="js/instafeed-photo-feed-init.js"></script>
+        <script src="js/instafeed-photo-feed-init.js"></script>
 
     </body>
 </html>
