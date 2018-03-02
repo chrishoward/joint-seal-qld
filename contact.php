@@ -92,7 +92,7 @@
 
         if ($nameReady && ($emailReady || $telReady || $emailTelReady) && $messageReady) {
             $headers = "Name: " . $name . "\r\n" . "Email: " . $email . "\r\n" . "Phone Number: " . $tel . "\r\n";
-            if (mail('chrisau233@gmail.com', 'Customer enquiry from website', $message, $headers)) {
+            if (mail('mail@example.com', 'Customer enquiry from website', $message, $headers)) {
                 $contactSendStatus = "<span style='color:#00AA00;'>Message sent, thanks you'll hear from us soon</span>";
             } else {
                 $contactSendStatus = "Hmm, the message didn't send. Try hitting 'Send Message' again";
