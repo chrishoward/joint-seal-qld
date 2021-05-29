@@ -1,0 +1,21 @@
+{
+  "name": "project-client-website-joint-seal-qld",
+  "version": "1.0.0",
+  "description": "<p><img src=\"https://i.imgur.com/izuOONF.png\" alt=\"joint seal qld logo\" width=\"350px\"></p>\r <p>Developed for a client's business, this responsive website was built from scratch in order to learn the various stages of developing websites from the ground up. The following software and plugins were used in its development.</p>\r <br>\r <table>\r <tr>\r     <td>Wireframing</td>\r     <td><img src=\"https://cdn.worldvectorlogo.com/logos/figma-1.svg\" alt=\"figma logo\" height=\"35px\" valign=\"middle\">&nbsp Figma</td>\r </tr>\r <tr>\r     <td>Mockups</td>\r     <td><img src=\"https://cdn.worldvectorlogo.com/logos/figma-1.svg\" alt=\"figma logo\" height=\"35px\" valign=\"middle\">&nbsp Figma</td>\r </tr>\r <tr>\r     <td>HTML</td>\r     <td><img src=\"https://upload.wikimedia.org/wikipedia/commons/f/f3/Visual_Studio_Code_0.10.1_icon.png\" alt=\"visual studio code logo\" height=\"35px\" valign=\"middle\">&nbsp Visual Studio Code</td>\r </tr>\r <tr>\r     <td>CSS</td>\r     <td><img src=\"https://upload.wikimedia.org/wikipedia/commons/f/f3/Visual_Studio_Code_0.10.1_icon.png\" alt=\"visual studio code logo\" height=\"35px\" valign=\"middle\">&nbsp Visual Studio Code</td>\r </tr>\r <tr>\r     <td>JavaScript - Photo Slider</td>\r     <td></td>\r </tr>\r <tr>\r     <td>JavaScript - Instagram Plugin</td>\r     <td></td>\r </tr>\r <tr>\r     <td>Map API</td>\r     <td>Google Maps</td>\r </tr>\r <tr>\r     <td></td>\r     <td></td>\r </tr>\r </table>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christopher-howard/Project-Client-Website-Joint-Seal-QLD.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/christopher-howard/Project-Client-Website-Joint-Seal-QLD/issues"
+  },
+  "homepage": "https://github.com/christopher-howard/Project-Client-Website-Joint-Seal-QLD#readme",
+  "devDependencies": {},
+  "dependencies": {}
+}
