@@ -1,1 +1,1 @@
-For project details see www.chrishoward.com.au/#projects
+For details about this project see projects at www.chrishoward.com.au
